@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TimeTable</string>
+
+
+    //Fach Erstellen Activity
+    <string name="fach">Fach:</string>
+    <string name="kuerzel">Kürzel:</string>
+    <string name="raum">Raum:</string>
+    <string name="lehrer">Lehrer:</string>
+    <string name="speichern">Speichern</string>
+    <string name="abbrechen">Abbrechen</string>
+    <string name="fachHinzufuegen">Fach hinzufügen</string>
+    <string name="fachErstellen">Fach erstellen</string>
+    <string name="farbe">Farbe:</string>
+    <string name="plus">+</string>
+    <string name="title_activity_raum_erstellen">RaumErstellen</string>
+    <string name="raumnummer">Raumnummer:</string>
+    <string name="raumart">Raumart:</string>
+</resources>
