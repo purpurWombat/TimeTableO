@@ -34,6 +34,8 @@ public class EditActivity extends AppCompatActivity {
 
     DatabaseHelper myDb;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
