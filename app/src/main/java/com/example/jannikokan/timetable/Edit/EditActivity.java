@@ -105,6 +105,25 @@ public class EditActivity extends AppCompatActivity {
 
 
 
+    public void addLehrer(String inputL, String inputLKz , String inputLMail){
+        boolean istGespeichert = myDb.speicherLehrer(inputL,inputLKz , inputLMail);
+        if (istGespeichert==true){
+            Toast.makeText(EditActivity.this, "Fach wurde gespeichert.", Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(EditActivity.this, "Fach konnte nicht gespeichert werden.", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    public void addRaum(String inputR, String inputRArt){
+        boolean istGespeichert = myDb.speichereRaum(inputR,inputRArt);
+        if (istGespeichert==true){
+            Toast.makeText(EditActivity.this, "Fach wurde gespeichert.", Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(EditActivity.this, "Fach konnte nicht gespeichert werden.", Toast.LENGTH_LONG).show();
+        }
+    }
 
 
 

@@ -53,7 +53,7 @@
             android:layout_marginRight="20dp"
             android:textSize="18sp"
             android:textColor="#33bbff"
-            android:id="@+id/action_ok"/>
+            android:id="@+id/btFachSp"/>
 
         <Button
             android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
             android:layout_marginRight="20dp"
             android:textSize="18sp"
             android:textColor="#33bbff"
-            android:id="@+id/action_cancel"/>
+            android:id="@+id/btFachAnz"/>
 
 
 

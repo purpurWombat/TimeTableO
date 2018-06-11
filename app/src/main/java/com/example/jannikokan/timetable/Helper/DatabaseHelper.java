@@ -31,9 +31,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-        private static final String create_Table2 = "create table " + TABLE_LEHRER + "("+ LEHRERID +" INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME +" TEXT," + LEHRERKUERZEL + " TEXT,"+ LEHRERRAUM + " TEXT," + LEHRERMAIL + " TEXT)";
+       // private static final String create_Table2 = "create table " + TABLE_LEHRER + "("+ LEHRERID +" INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME +" TEXT," + LEHRERKUERZEL + " TEXT,"+ LEHRERRAUM + " TEXT," + LEHRERMAIL + " TEXT)";
+
        // private static final String create_Table = "create table " + TABLE_NAME + "("+ FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME +" TEXT," + FACH_KUERZEL + " TEXT,"+ FACH_RAUM + " TEXT," + FACH_LEHRER + " TEXT)";
-    private static final String create_Table = "create table " + TABLE_NAME + "("+ FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME +" TEXT," + FACH_KUERZEL + " TEXT)";
+       private static final String create_Table2 = "create table " + TABLE_LEHRER + "("+ LEHRERID +" INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME +" TEXT," + LEHRERKUERZEL + " TEXT," + LEHRERMAIL + " TEXT)";
+       private static final String create_Table = "create table " + TABLE_NAME + "("+ FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME +" TEXT," + FACH_KUERZEL + " TEXT)";
         private static final String create_TableRaum = "create table " + TABLE_RAUM + "("+  RAUM_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + RAUM_NUMMER +" TEXT," + RAUM_ART + " TEXT)";
 
 
@@ -178,12 +180,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
 
-        public boolean speicherLehrer(String lehrerName, String lehrerKuerzel, String lehrerRaum, String lehrerMail){
+        public boolean speicherLehrer(String lehrerName, String lehrerKuerzel, String lehrerMail){
             SQLiteDatabase db = this.getWritableDatabase();
             ContentValues contentValues = new ContentValues();
             contentValues.put(LEHRERNAME, lehrerName);
             contentValues.put(LEHRERKUERZEL, lehrerKuerzel);
-            contentValues.put(LEHRERRAUM, lehrerRaum);
             contentValues.put(LEHRERMAIL, lehrerMail);
             long result = db.insert(TABLE_LEHRER, null, contentValues);
             if (result == -1){
