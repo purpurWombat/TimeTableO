@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.jannikokan.timetable.Edit.SectionsPageAdapter;
 import com.example.jannikokan.timetable.Helper.BottomNavVieweHerlper;
 import com.example.jannikokan.timetable.R;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
@@ -23,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     private Context myContext = HomeActivity.this;
     private final static String TAG = "HomeActivity";
     private final static int ACTIVITY_NUM = 0;
+    ViewPager myViewPager;
 
 
     @Override
@@ -33,13 +35,15 @@ public class HomeActivity extends AppCompatActivity {
         setupBottomNavigationView();
 
 
+        myViewPager = (ViewPager) findViewById(R.id.container);
 
 
-         TimeTableFragment timeTableFragment = new TimeTableFragment();
 
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.container, timeTableFragment, "Okan");
-        transaction.commit();
+        TimeTableFragment timeTableFragment = new TimeTableFragment();
+        SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
+
+        adapter.addFragment( timeTableFragment, "Test");
+        myViewPager.setAdapter(adapter);
 
 
 

@@ -1,48 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-<TableLayout
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content">
+    <TableLayout
+        android:id="@+id/tableLayoutTage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
 
-    <TableRow>
+        <TableRow>
 
-        <TextView
-            android:id="@+id/textViewLeer"
-            android:layout_width="30dp"
-            android:text=" "/>
+            <TextView
+                android:id="@+id/textViewLeer"
+                android:layout_width="30dp"
+                android:text=" " />
 
-        <TextView
-            android:id="@+id/textViewMontag"
-            android:layout_width="60dp"
-            android:text="M" />
+            <TextView
+                android:id="@+id/textViewMontag"
+                android:layout_width="60dp"
+                android:text="M" />
 
-        <TextView
-            android:id="@+id/textViewDienstag"
-            android:layout_width="60dp"
-            android:text="D" />
+            <TextView
+                android:id="@+id/textViewDienstag"
+                android:layout_width="60dp"
+                android:text="D" />
 
-        <TextView
-            android:id="@+id/textViewMittwoch"
-            android:layout_width="60dp"
-            android:text="Mi" />
+            <TextView
+                android:id="@+id/textViewMittwoch"
+                android:layout_width="60dp"
+                android:text="Mi" />
 
-        <TextView
-            android:id="@+id/textViewDonnerstag"
-            android:layout_width="60dp"
-            android:text="Do" />
+            <TextView
+                android:id="@+id/textViewDonnerstag"
+                android:layout_width="60dp"
+                android:text="Do" />
 
-        <TextView
-            android:id="@+id/textViewFreitag"
-            android:layout_width="60dp"
-            android:text="Fr" />
+            <TextView
+                android:id="@+id/textViewFreitag"
+                android:layout_width="60dp"
+                android:text="Fr" />
 
 
-    </TableRow>
+        </TableRow>
 
-</TableLayout>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tableLayoutTage"
+        android:layout_centerHorizontal="true">
+
+        <TableRow>
+
+            <RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="30dp"
+                    android:text="1" />
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="60dp">
+
+                <include layout="@layout/fragment_timetable_stunde" />
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="60dp">
+
+                <include layout="@layout/fragment_timetable_stunde" />
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="60dp">
+
+                <include layout="@layout/fragment_timetable_stunde" />
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="60dp">
+
+                <include layout="@layout/fragment_timetable_stunde" />
+
+            </RelativeLayout>
+
+            <RelativeLayout android:layout_width="60dp">
+
+                <include layout="@layout/fragment_timetable_stunde" />
+            </RelativeLayout>
+
+
+        </TableRow>
+
+
+    </TableLayout>
 
 
 </RelativeLayout>

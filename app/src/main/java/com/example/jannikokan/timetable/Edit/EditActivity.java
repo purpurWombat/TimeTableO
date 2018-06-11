@@ -67,7 +67,7 @@ public class EditActivity extends AppCompatActivity {
      * */
     private void setupViewPager (ViewPager viewPager){
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FachFragment(), "Lehrer");
+        adapter.addFragment(new FachFragment(), "Fach");
         adapter.addFragment(new LehrerFragment(), "Lehrer");
         adapter.addFragment(new RaumFragment(), "Raum");
         viewPager.setAdapter(adapter);
