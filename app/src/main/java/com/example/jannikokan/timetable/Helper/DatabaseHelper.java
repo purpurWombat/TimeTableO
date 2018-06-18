@@ -28,15 +28,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         public static final String RAUM_ID = "ID_RAUM";
         public static final String RAUM_NUMMER = "RAUMNUMMER";
         public static final String RAUM_ART = "RAUMART";
+        public static final String TABLE_UNTERRICHTSSTUNDEN = "Unterrichtsstunden_table";
+        public static final String UNTERRICHTSSTUNDE_ID = "UNTERRICHTSSTUNDEID";
+        public static final String UNTERRICHTSSTUNDE_FACH = "FachNr";
+        public static final String UNTERRICHTSSTUNDE_LEHRER = "LehrerNr";
+        public static final String UNTERRICHTSSTUNDE_RAUM = "RaumNr";
 
 
-
-       // private static final String create_Table2 = "create table " + TABLE_LEHRER + "("+ LEHRERID +" INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME +" TEXT," + LEHRERKUERZEL + " TEXT,"+ LEHRERRAUM + " TEXT," + LEHRERMAIL + " TEXT)";
-
-       // private static final String create_Table = "create table " + TABLE_NAME + "("+ FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME +" TEXT," + FACH_KUERZEL + " TEXT,"+ FACH_RAUM + " TEXT," + FACH_LEHRER + " TEXT)";
-       private static final String create_Table2 = "create table " + TABLE_LEHRER + "("+ LEHRERID +" INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME +" TEXT," + LEHRERKUERZEL + " TEXT," + LEHRERMAIL + " TEXT)";
-       private static final String create_Table = "create table " + TABLE_NAME + "("+ FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME +" TEXT," + FACH_KUERZEL + " TEXT)";
+        private static final String create_Table2 = "create table " + TABLE_LEHRER + "("+ LEHRERID +" INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME +" TEXT," + LEHRERKUERZEL + " TEXT," + LEHRERMAIL + " TEXT)";
+        private static final String create_Table = "create table " + TABLE_NAME + "("+ FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME +" TEXT," + FACH_KUERZEL + " TEXT)";
         private static final String create_TableRaum = "create table " + TABLE_RAUM + "("+  RAUM_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + RAUM_NUMMER +" TEXT," + RAUM_ART + " TEXT)";
+        private static final String create_TableUnterrichtsstunden = "create table " + TABLE_UNTERRICHTSSTUNDEN + "("+  UNTERRICHTSSTUNDE_ID + " TEXT PRIMARY KEY," + UNTERRICHTSSTUNDE_FACH +" TEXT," + UNTERRICHTSSTUNDE_LEHRER +" TEXT," + UNTERRICHTSSTUNDE_RAUM +" TEXT)";
 
 
 
@@ -50,10 +52,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         public void onCreate(SQLiteDatabase db) {
 
             Log.d("MeineAPP", "Tabelle angelegt");
-            //  db.execSQL("create table " + TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, FACHNAME TEXT, FACHKUERZEL TEXT, FACHRAUM TEXT, FACHLEHRER TEXT)");
             db.execSQL(create_Table);
             db.execSQL(create_Table2);
             db.execSQL(create_TableRaum);
+            db.execSQL(create_TableUnterrichtsstunden);
 
         }
 
@@ -68,6 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
             db.execSQL( "DROP TABLE IF EXISTS " + TABLE_LEHRER);
             db.execSQL( "DROP TABLE IF EXISTS " + TABLE_RAUM);
+            db.execSQL( "DROP TABLE IF EXISTS " + TABLE_UNTERRICHTSSTUNDEN);
             onCreate(db);
             Log.d("MeineAPP", "in upgrade");
 
@@ -78,13 +81,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             String[] benoetigte_tabellen = new String[]{
                     TABLE_NAME,
                     TABLE_LEHRER,
-                    TABLE_RAUM
+                    TABLE_RAUM,
+                    TABLE_UNTERRICHTSSTUNDEN
             };
 
             String[] table_create_statements = new String[] {
                     create_Table,
                     create_Table2,
-                    create_TableRaum
+                    create_TableRaum,
+                    create_TableUnterrichtsstunden
             };
             erstelleTabellenDieNichtExistieren(benoetigte_tabellen,table_create_statements);
         }
