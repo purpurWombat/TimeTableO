@@ -13,19 +13,23 @@
             <TableLayout>
 
             <TextView
+                android:clickable="true"
                 android:id="@+id/textViewFach"
                 android:layout_width="30dp"
-                android:text="Ma"/>
+                android:text="-"/>
+
+                <TextView
+                    android:clickable="true"
+                    android:id="@+id/textViewLehrer"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
 
             <TextView
-                android:id="@+id/textViewLehrer"
-                android:layout_width="30dp"
-                android:text="Me" />
-
-            <TextView
+                android:clickable="true"
                 android:id="@+id/textViewRaum"
                 android:layout_width="30dp"
-                android:text="345" />
+                android:text="-" />
 
             </TableLayout>
 

@@ -46,6 +46,7 @@ public class DialogLehrerAnzeigen extends DialogFragment {
 
 
 
+
         if (res.getCount() == 0) {
 
 
@@ -58,7 +59,6 @@ public class DialogLehrerAnzeigen extends DialogFragment {
                 ListAdapter fachListAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, lehrerList);
                 listViewLehrer.setAdapter(fachListAdapter);
             }
-            //  }
 
             listViewLehrer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override

@@ -63,9 +63,13 @@
                     android:text="1" />
             </RelativeLayout>
 
-            <RelativeLayout android:layout_width="60dp">
+            <RelativeLayout android:layout_width="60dp"
+                android:id="@+id/montag1"
+                android:clickable="true"
+                >
 
                 <include layout="@layout/fragment_timetable_stunde" />
+
 
             </RelativeLayout>
 
@@ -96,7 +100,681 @@
         </TableRow>
 
 
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="2" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="3" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="4" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="5" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="6" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="7" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="8" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="9" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tableLayoutTage"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+
+                <RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:width="30dp"
+                        android:text="10" />
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp"
+                    >
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+
+                </RelativeLayout>
+
+                <RelativeLayout android:layout_width="60dp">
+
+                    <include layout="@layout/fragment_timetable_stunde" />
+                </RelativeLayout>
+
+
+            </TableRow>
+
+
+        </TableLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </TableLayout>
+
 
 
 </RelativeLayout>
