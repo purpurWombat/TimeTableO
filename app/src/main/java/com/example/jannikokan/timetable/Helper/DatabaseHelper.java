@@ -57,6 +57,60 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             db.execSQL(create_TableRaum);
             db.execSQL(create_TableUnterrichtsstunden);
 
+
+
+            //IDs für einzelne Stunden werden in Tabelle Unterrichtsstunden eingetragen
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO1',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO2',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO3',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO4',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO5',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO6',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO7',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO8',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO9',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO10',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI1',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI2',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI3',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI4',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI5',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI6',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI7',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI8',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI9',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI10',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI1',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI2',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI3',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI4',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI5',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI6',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI7',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI8',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI9',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI10',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO1',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO2',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO3',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO4',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO5',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO6',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO7',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO8',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO9',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO10',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR1',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR2',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR3',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR4',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR5',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR6',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR7',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR8',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR9',NULL,NULL,NULL)");
+            db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR10',NULL,NULL,NULL)");
+
         }
 
 
