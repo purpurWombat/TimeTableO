@@ -64,7 +64,7 @@
             </RelativeLayout>
 
             <RelativeLayout android:layout_width="60dp"
-                android:id="@+id/montag1"
+                android:id="@+id/MO1"
                 android:clickable="true"
                 >
 

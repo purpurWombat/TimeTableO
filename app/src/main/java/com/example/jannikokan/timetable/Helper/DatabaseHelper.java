@@ -1,6 +1,7 @@
 package com.example.jannikokan.timetable.Helper;
 
 import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -42,7 +43,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
-        public DatabaseHelper(EditActivity context) {
+        public DatabaseHelper(Context context) {
             super(context, DATABASE_NAME, null, 1);
 
             Log.d("MeineAPP", "DB angelegt");
@@ -276,6 +277,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             Cursor res = db.rawQuery("select * from "+ TABLE_RAUM,null);
             return res;
         }
+
+    public boolean speicherStunde(String fachKuerzel, String lehrerKuerzel, String raumNummer){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(UNTERRICHTSSTUNDE_FACH, fachKuerzel);
+        contentValues.put(UNTERRICHTSSTUNDE_LEHRER, lehrerKuerzel);
+        contentValues.put(UNTERRICHTSSTUNDE_RAUM, raumNummer);
+        long result = db.insert(TABLE_UNTERRICHTSSTUNDEN, null, contentValues);
+        if (result == -1){
+            return  false;
+        }
+        else {
+            return  true;
+        }
+    }
 
 
 

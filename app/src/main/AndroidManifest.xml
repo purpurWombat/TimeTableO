@@ -21,6 +21,7 @@
         <activity android:name=".Note.NoteActivity" />
         <activity android:name=".Calender.CalenderActivity" />
         <activity android:name=".Edit.EditActivity"></activity>
+        <activity android:name=".Table.StundeZuweisen"></activity>
     </application>
 
 </manifest>
