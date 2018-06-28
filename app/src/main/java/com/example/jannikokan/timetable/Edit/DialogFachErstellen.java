@@ -60,11 +60,8 @@ public class DialogFachErstellen extends DialogFragment {
             Toast.makeText((EditActivity) getActivity(), "Keine Facher da", Toast.LENGTH_LONG).show();
         }
         else {
-            if(res.moveToFirst()) {
-                do {
 
-                }
-                while (res.moveToNext()); {
+                while (res.moveToNext()) {
 
                     faecherListe.add(res.getString(1));
                     ListAdapter fachListAdapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, faecherListe);
@@ -88,7 +85,7 @@ public class DialogFachErstellen extends DialogFragment {
             });
 
 
-        }
+
 
 
         return view;

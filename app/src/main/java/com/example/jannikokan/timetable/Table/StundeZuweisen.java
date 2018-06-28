@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.jannikokan.timetable.Edit.FachFragment;
 import com.example.jannikokan.timetable.Helper.DatabaseHelper;
 import com.example.jannikokan.timetable.R;
 
@@ -41,6 +42,11 @@ public class StundeZuweisen extends AppCompatActivity {
 
     Button buttonStundeZuweisen;
 
+
+
+
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +64,8 @@ public class StundeZuweisen extends AppCompatActivity {
         lehrerAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, lehrerListe);
         raumAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, raumListe);
         buttonStundeZuweisen = findViewById(R.id.buttonStundeZuweisen);
+
+
 
 
 
@@ -109,7 +117,10 @@ public class StundeZuweisen extends AppCompatActivity {
                 boolean istGespeichert = myDb.speicherStunde(fachSpinnerText, lehrerSpinnerText, raumSpinnerText);
                 if (istGespeichert == true){
                     Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
+
+
                 }
+
             }
         });
 
