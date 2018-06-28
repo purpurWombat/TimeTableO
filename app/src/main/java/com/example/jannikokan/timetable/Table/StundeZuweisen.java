@@ -139,6 +139,8 @@ public class StundeZuweisen extends AppCompatActivity {
                 LKZ = lehrerSpinnerText;
                 RKZ = raumSpinnerText;
                 Log.d(TAG, "" + ViewID + FKZ + LKZ + RKZ);
+                timeTableFragment.schreibeInArray(ViewID, FKZ,LKZ,RKZ);
+
 
           /*      boolean istGespeichert =  myDb.speicherStunde(ViewID, FKZ, LKZ , RKZ);
                 if (istGespeichert == true){

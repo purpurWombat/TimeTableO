@@ -16,6 +16,9 @@ import android.widget.TextView;
 import com.example.jannikokan.timetable.Helper.DatabaseHelper;
 import com.example.jannikokan.timetable.R;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class TimeTableFragment extends Fragment {
     private static final String TAG = "TimeTableFragment";
 
@@ -121,10 +124,11 @@ public class TimeTableFragment extends Fragment {
     ViewGroup D010;
     ViewGroup FR10;
 
+    String IDfinal;
+    String Montag1[] = {"-", " - " , " -"};
 
-
-String a = "b";
-
+String a ;
+    String b ;
         TextView Lehrer;
 
         TextView Raum;
@@ -143,14 +147,21 @@ String a = "b";
 
         DI1 = view.findViewById(R.id.DI1);
         FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
+        LehrerMO1 = (TextView) VGMO1.findViewById(R.id.textViewLehrer);
+        RaumMO1 = (TextView) VGMO1.findViewById(R.id.textViewRaum);
         FachDI1 = (TextView) DI1.findViewById(R.id.textViewFach);
         stundeZuweisen = new StundeZuweisen();
+
+
+
 
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 String ViewID = getResources().getResourceName(view.getId());
-                String IDfinal = cutID(ViewID);
+               IDfinal = cutID(ViewID);
+
+
 
             Log.d(TAG, ""+ IDfinal);
 
@@ -160,7 +171,27 @@ String a = "b";
                 return true;
             }
         });
+
+
+
+         arrayToString();
+        schreibeInTV(Montag1);
+
+        arrayToString();
+        schreibeInTV(Montag1);
+
         return view;
+    }
+
+    private void  arrayToString() {
+
+        a = Montag1[1];
+        b = Montag1[2];
+
+Log.d(TAG, ""+ a + b);
+
+
+
     }
 
 
@@ -178,7 +209,34 @@ String a = "b";
         FachMO1.setText(stundeZuweisen.getFachSpinnerText());
     }
 
+    public void schreibeInArray(String ID , String FKZ, String LKZ, String RKZ){
+        if  (ID.equals("MO1")){
 
+                    Montag1[0] = FKZ;
+                    Montag1[1] = LKZ;
+                    Montag1[2] = RKZ;
+            Log.d(TAG, "schreibeInArray: korrekt" + Montag1[0] + Montag1[1] + Montag1[2]);
+
+
+        }else{
+            Log.d(TAG, "schreibeInArray: fail");
+        }
+
+    }
+
+    public void schreibeInTV (String[] Stunde){
+
+
+                   FachMO1.setText(a);
+                   LehrerMO1.setText("b");
+                   RaumMO1.setText("s");
+            Log.d(TAG, "schreibeInTV: korrekt");
+
+
+
+
+
+    }
 
 }
 

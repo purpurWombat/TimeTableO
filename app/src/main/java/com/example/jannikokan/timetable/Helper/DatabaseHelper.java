@@ -280,6 +280,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return res;
         }
 
+    /**
+     *
+     * @param fachKuerzel
+     * @param lehrerKuerzel
+     * @param raumNummer
+     * @return
+     */
     public boolean speicherStunde(String fachKuerzel, String lehrerKuerzel, String raumNummer){
         String id = "MO1";
         SQLiteDatabase db = this.getWritableDatabase();
