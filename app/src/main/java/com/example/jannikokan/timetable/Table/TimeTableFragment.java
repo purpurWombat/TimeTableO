@@ -67,13 +67,11 @@ public class TimeTableFragment extends Fragment {
     ViewGroup FR3;
 
 
-
     ViewGroup MO4;
     ViewGroup DI4;
     ViewGroup MI4;
     ViewGroup D04;
     ViewGroup FR4;
-
 
 
     ViewGroup MO5;
@@ -83,13 +81,11 @@ public class TimeTableFragment extends Fragment {
     ViewGroup FR5;
 
 
-
     ViewGroup MO6;
     ViewGroup DI6;
     ViewGroup MI6;
     ViewGroup D06;
     ViewGroup FR6;
-
 
 
     ViewGroup MO7;
@@ -99,14 +95,11 @@ public class TimeTableFragment extends Fragment {
     ViewGroup FR7;
 
 
-
     ViewGroup MO8;
     ViewGroup DI8;
     ViewGroup MI8;
     ViewGroup D08;
     ViewGroup FR8;
-
-
 
 
     ViewGroup MO9;
@@ -116,8 +109,6 @@ public class TimeTableFragment extends Fragment {
     ViewGroup FR9;
 
 
-
-
     ViewGroup MO10;
     ViewGroup DI10;
     ViewGroup MI10;
@@ -125,27 +116,27 @@ public class TimeTableFragment extends Fragment {
     ViewGroup FR10;
 
     String IDfinal;
-    String Montag1[] = {"-", " - " , " -"};
+    String Montag1[] = {"-", " - ", " -"};
 
-String a ;
-    String b ;
+    String a;
+    String b;
     String c;
-        TextView Lehrer;
+    TextView Lehrer;
 
-        TextView Raum;
+    TextView Raum;
 
-        StundeZuweisen stundeZuweisen;
+    StundeZuweisen stundeZuweisen;
 
 
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_timetable, container ,false);
+        View view = inflater.inflate(R.layout.fragment_timetable, container, false);
         myTL = view.findViewById(R.id.tableLayoutTage);
         MO1 = view.findViewById(R.id.MO1);
-       VGMO1 = view.findViewById(R.id.MO1);
-       DI1 = view.findViewById(R.id.DI1);
+        VGMO1 = view.findViewById(R.id.MO1);
+        DI1 = view.findViewById(R.id.DI1);
 
         DI1 = view.findViewById(R.id.DI1);
         FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
@@ -154,26 +145,26 @@ String a ;
         FachDI1 = (TextView) DI1.findViewById(R.id.textViewFach);
         stundeZuweisen = new StundeZuweisen();
 
-DI1.setOnLongClickListener(new View.OnLongClickListener() {
-    @Override
-    public boolean onLongClick(View v) {
-        schreibeInArray("MO1", "O", " k" , " z");
-        arrayToString();
-        schreibeInTV(a , b , c);
-        return false;
-    }
-});
+        DI1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                String a = Montag1[0];
+                String b = Montag1[1];
+                String c = Montag1[2];
+                schreibeInTV(a, b, c);
+                return true;
+            }
+        });
 
 
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 String ViewID = getResources().getResourceName(view.getId());
-               IDfinal = cutID(ViewID);
+                IDfinal = cutID(ViewID);
 
 
-
-            Log.d(TAG, ""+ IDfinal);
+                Log.d(TAG, "" + IDfinal);
 
                 Intent intent = new Intent(getActivity(), StundeZuweisen.class);
                 intent.putExtra("ViewID", IDfinal);
@@ -183,27 +174,19 @@ DI1.setOnLongClickListener(new View.OnLongClickListener() {
         });
 
 
-
-         arrayToString();
+        //arrayToString();
 
 
         return view;
     }
 
-    private void  arrayToString() {
-
+    /*private void arrayToString() {
         a = Montag1[1];
         b = Montag1[2];
         c = Montag1[0];
-
-
-
-Log.d(TAG, ""+ a + b);
-
-
-
+        Log.d(TAG, "" + a + b);
     }
-
+*/
 
     public String cutID(String longID) {
         if (longID.length() == 3) {
@@ -215,37 +198,27 @@ Log.d(TAG, ""+ a + b);
     }
 
 
-    public void setzeTextViewFachMO1(){
+    public void setzeTextViewFachMO1() {
         FachMO1.setText(stundeZuweisen.getFachSpinnerText());
     }
 
-    public void schreibeInArray(String ID , String FKZ, String LKZ, String RKZ){
-        if  (ID.equals("MO1")){
-
-                    Montag1[0] = FKZ;
-                    Montag1[1] = LKZ;
-                    Montag1[2] = RKZ;
+    public void schreibeInArray(String ID, String FKZ, String LKZ, String RKZ) {
+        if (ID.equals("MO1")) {
+            Montag1[0] = FKZ;
+            Montag1[1] = LKZ;
+            Montag1[2] = RKZ;
             Log.d(TAG, "schreibeInArray: korrekt" + Montag1[0] + Montag1[1] + Montag1[2]);
-
-
-        }else{
+        } else {
             Log.d(TAG, "schreibeInArray: fail");
         }
-
     }
 
-    public void schreibeInTV (String a , String b , String c ){
-
-
-                   FachMO1.setText(a);
-                   LehrerMO1.setText(b);
-                   RaumMO1.setText(b);
-            Log.d(TAG, "schreibeInTV: korrekt");
-
-
-
-
-
+    public void schreibeInTV(String a, String b, String c) {
+        FachMO1.setText(a);
+        LehrerMO1.setText(b);
+        RaumMO1.setText(c);
+        String FachMO1Test =  FachMO1.getText().toString();
+        Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
     }
 
 }

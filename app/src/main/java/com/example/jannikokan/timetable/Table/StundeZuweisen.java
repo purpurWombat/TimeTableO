@@ -44,9 +44,9 @@ public class StundeZuweisen extends AppCompatActivity {
     String lehrerSpinnerText;
     String raumSpinnerText;
 
-    String FKZ;
+    /*String FKZ;
     String LKZ;
-    String RKZ;
+    String RKZ;*/
 
     Button buttonStundeZuweisen;
 
@@ -135,22 +135,18 @@ public class StundeZuweisen extends AppCompatActivity {
         buttonStundeZuweisen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FKZ = fachSpinnerText;
-                LKZ = lehrerSpinnerText;
-                RKZ = raumSpinnerText;
+                String FKZ = fachSpinnerText;
+                String LKZ = lehrerSpinnerText;
+                String RKZ = raumSpinnerText;
                 Log.d(TAG, "" + ViewID + FKZ + LKZ + RKZ);
                 timeTableFragment.schreibeInArray(ViewID, FKZ,LKZ,RKZ);
 
+                Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
 
-          /*      boolean istGespeichert =  myDb.speicherStunde(ViewID, FKZ, LKZ , RKZ);
+                /*boolean istGespeichert =  myDb.speicherStunde(ViewID, FKZ, LKZ , RKZ);
                 if (istGespeichert == true){
                     Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
                 }*/
-
-
-
-
-
             }
         });
 
