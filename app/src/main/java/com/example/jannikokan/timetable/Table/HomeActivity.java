@@ -28,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
 
 //test
     //okan
+    // okan 23
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
