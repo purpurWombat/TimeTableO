@@ -42,6 +42,7 @@ public class StundeZuweisen extends AppCompatActivity {
 
     Button buttonStundeZuweisen;
 
+    TimeTableFragment timeTableFragment;
 
 
 
@@ -51,6 +52,7 @@ public class StundeZuweisen extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stunde_zuweisen);
+
 
 
         myDb = new DatabaseHelper(this);
@@ -65,6 +67,8 @@ public class StundeZuweisen extends AppCompatActivity {
         raumAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, raumListe);
         buttonStundeZuweisen = findViewById(R.id.buttonStundeZuweisen);
 
+        timeTableFragment = new TimeTableFragment();
+
 
 
 
@@ -73,6 +77,7 @@ public class StundeZuweisen extends AppCompatActivity {
         zeigeSpinnerFaecher();
         zeigeSpinnerLehrer();
         zeigeSpinnerRaum();
+        getFachSpinnerText();
 
 
 
@@ -87,6 +92,8 @@ public class StundeZuweisen extends AppCompatActivity {
 
             }
         });
+
+
 
         lehrerSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -113,16 +120,16 @@ public class StundeZuweisen extends AppCompatActivity {
         });
 
 
-
         buttonStundeZuweisen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean istGespeichert = myDb.speicherStunde(fachSpinnerText, lehrerSpinnerText, raumSpinnerText);
+                /*boolean istGespeichert = myDb.speicherStunde(fachSpinnerText, lehrerSpinnerText, raumSpinnerText);
                 if (istGespeichert == true){
                     Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
+                }*/
 
+                timeTableFragment.setzeTextViewFachMO1();
 
-                }
 
             }
         });
@@ -173,11 +180,9 @@ public class StundeZuweisen extends AppCompatActivity {
 
     }
 
-
-
-
-
-
+    public String getFachSpinnerText() {
+        return fachSpinnerText;
     }
+}
 
 

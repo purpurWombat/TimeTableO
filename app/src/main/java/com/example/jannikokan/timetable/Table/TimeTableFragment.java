@@ -128,6 +128,8 @@ String a = "b";
 
         TextView Raum;
 
+        StundeZuweisen stundeZuweisen;
+
 
     @Nullable
     @Override
@@ -139,18 +141,10 @@ String a = "b";
        VGMO1 = view.findViewById(R.id.MO1);
 
         DI1 = view.findViewById(R.id.DI1);
-       FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
+        FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
         FachDI1 = (TextView) DI1.findViewById(R.id.textViewFach);
+        stundeZuweisen = new StundeZuweisen();
 
-
-
-
-
-
-
-
-        FachMO1.setText(myDb.getFachMO1());
-        
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -159,24 +153,12 @@ String a = "b";
                 return true;
             }
         });
-
-
-
-        
-
-
         return view;
     }
 
 
-
-
-
-
-
-    public void setMontag1 (String MOF){
-        FachMO1.setText(MOF);
-
+    public void setzeTextViewFachMO1() {
+        FachMO1.setText(stundeZuweisen.getFachSpinnerText());
     }
 
 

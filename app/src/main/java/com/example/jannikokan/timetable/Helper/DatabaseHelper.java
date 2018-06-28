@@ -299,9 +299,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public String getFachMO1(){
+    /*public String getFachMO1(){
             SQLiteDatabase db = this.getWritableDatabase();
             //String query = "SELECT FachNr FROM Unterrichtsstunden_table WHERE UNTERRICHTSSTUNDEID = MO1";
              return db.execSQL("SELECT FachNr FROM Unterrichtsstunden_table WHERE UNTERRICHTSSTUNDEID = MO1");
-    }
+    }*/
 }
