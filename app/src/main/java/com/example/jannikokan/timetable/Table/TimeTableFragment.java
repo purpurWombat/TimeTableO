@@ -12,12 +12,15 @@ import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
+import com.example.jannikokan.timetable.Helper.DatabaseHelper;
 import com.example.jannikokan.timetable.R;
 
 public class TimeTableFragment extends Fragment {
     private static final String TAG = "TimeTableFragment";
 
     TableLayout myTL;
+    DatabaseHelper myDb;
+
 
     // Initialisierung der Text Views von der Ersten Stunde von jedem Tag
     ViewGroup VGMO1;
@@ -139,20 +142,25 @@ String a = "b";
        FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
         FachDI1 = (TextView) DI1.findViewById(R.id.textViewFach);
 
+        myDb = new DatabaseHelper(this);
 
 
 
 
+
+        FachMO1.setText("Okan");
         
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 Intent intent = new Intent(getActivity(), StundeZuweisen.class);
                 startActivity(intent);
-
                 return true;
             }
         });
+
+
+
         
 
 

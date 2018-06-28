@@ -281,13 +281,21 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
     public boolean speicherStunde(String fachKuerzel, String lehrerKuerzel, String raumNummer){
+        String id = "MO1";
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(UNTERRICHTSSTUNDE_FACH,fachKuerzel);
         contentValues.put(UNTERRICHTSSTUNDE_LEHRER, lehrerKuerzel);
         contentValues.put(UNTERRICHTSSTUNDE_RAUM, raumNummer);
-        db.update(TABLE_UNTERRICHTSSTUNDEN, contentValues, UNTERRICHTSSTUNDE_ID + "= MO1", null);
-        return true;
+        long result = db.update(TABLE_UNTERRICHTSSTUNDEN, contentValues, UNTERRICHTSSTUNDE_ID+"="+id, null);
+        if (result == -1){
+            return  false;
+        }
+        else {
+            return  true;
+        }
+
+
 
     }
 
