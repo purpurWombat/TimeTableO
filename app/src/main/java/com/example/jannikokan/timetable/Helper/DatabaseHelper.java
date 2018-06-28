@@ -280,8 +280,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return res;
         }
 
-    public boolean speicherStunde(String ViewID ,String fachKuerzel, String lehrerKuerzel, String raumNummer){
-        String id = ViewID;
+    public boolean speicherStunde(String fachKuerzel, String lehrerKuerzel, String raumNummer){
+        String id = "MO1";
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(UNTERRICHTSSTUNDE_FACH,fachKuerzel);
