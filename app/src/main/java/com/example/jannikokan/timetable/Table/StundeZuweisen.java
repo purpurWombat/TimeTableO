@@ -1,5 +1,6 @@
 package com.example.jannikokan.timetable.Table;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -43,6 +44,7 @@ public class StundeZuweisen extends AppCompatActivity {
     Button buttonStundeZuweisen;
 
 
+String a ;
 
 
 
@@ -80,7 +82,9 @@ public class StundeZuweisen extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 fachSpinnerText = fachSpinner.getSelectedItem().toString();
+
             }
+
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
@@ -120,7 +124,6 @@ public class StundeZuweisen extends AppCompatActivity {
                 boolean istGespeichert = myDb.speicherStunde(fachSpinnerText, lehrerSpinnerText, raumSpinnerText);
                 if (istGespeichert == true){
                     Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
-
 
                 }
 
@@ -172,7 +175,6 @@ public class StundeZuweisen extends AppCompatActivity {
         raumSpinner.setAdapter(raumAdapter);
 
     }
-
 
 
 

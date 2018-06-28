@@ -13,6 +13,7 @@ public class SectionsPageAdapter extends FragmentPagerAdapter {
     private final List<String> myFragmentTitleList = new ArrayList<>();
 
 
+    /*Zu jedem Frgment wird ein passender Titel zum anzeigen übergeben*/
     public void addFragment(Fragment fragment, String title){
         myFragmentList.add(fragment);
         myFragmentTitleList.add(title);
@@ -24,16 +25,19 @@ public class SectionsPageAdapter extends FragmentPagerAdapter {
     }
 
 
+    /* Ermitteln der Akutellen position in der Titelliste der Fragmenttitel*/
     @Override
     public CharSequence getPageTitle(int position) {
         return myFragmentTitleList.get(position);
     }
 
+    /*Ermitteln der Aktuellen position in der Fragmentliste*/
     @Override
     public Fragment getItem(int position) {
         return myFragmentList.get(position);
     }
 
+    /*Zum ermitteln der Akutellen größe der Frgment liste*/
     @Override
     public int getCount() {
         return myFragmentList.size();

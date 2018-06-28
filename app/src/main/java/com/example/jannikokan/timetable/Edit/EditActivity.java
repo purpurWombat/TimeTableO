@@ -42,10 +42,11 @@ public class EditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit);
         Log.d(TAG, "onCreate: -->");
 
-
+        /* Hinzufügen des Fragment wechseln adapters*/
         mySectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
         myViewPager = (ViewPager) findViewById(R.id.container);
 
+        /* Tab layout erstellen */
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(myViewPager);
 
@@ -63,7 +64,7 @@ public class EditActivity extends AppCompatActivity {
 
 
     /**
-     * Top Navigation mit Fragments
+     * Tap Navigation mit Fragments
      * */
     private void setupViewPager (ViewPager viewPager){
         SectionsPageAdapter adapter = new SectionsPageAdapter(getSupportFragmentManager());
@@ -79,7 +80,7 @@ public class EditActivity extends AppCompatActivity {
 
 
     /**
-     *  Bottom Navigation View
+     *  Bottom Navigation View setzen
      * */
     private void setupBottomNavigationView(){
         Log.d(TAG, "-> setupBottomNavView");

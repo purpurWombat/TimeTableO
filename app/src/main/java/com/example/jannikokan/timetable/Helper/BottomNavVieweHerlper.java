@@ -27,7 +27,9 @@ public class BottomNavVieweHerlper  {
     }
 
 
-    /* final Context -> damit man in der Override damit arbeiten kann*/
+    /*
+    * Den Context auf final setzen damit man in der Override damit arbeiten kann
+    * */
 
     public static void enableNavigation(final Context context, BottomNavigationViewEx viewEx){
         viewEx.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -37,7 +39,9 @@ public class BottomNavVieweHerlper  {
 
 
 
-
+                    /*
+                    * Wechseln der Activitys über die Bottom Navigation wenn die Icons gedrückt werden
+                    * */
                     case R.id.ic_table:
                         Intent intent2 = new Intent(context, HomeActivity.class);
                         context.startActivity(intent2);
