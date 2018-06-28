@@ -142,7 +142,8 @@ String a = "b";
        FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
         FachDI1 = (TextView) DI1.findViewById(R.id.textViewFach);
 
-        myDb = new DatabaseHelper(this);
+
+
 
 
 
