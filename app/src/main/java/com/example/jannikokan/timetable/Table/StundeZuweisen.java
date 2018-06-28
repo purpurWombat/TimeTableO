@@ -23,7 +23,7 @@ public class StundeZuweisen extends AppCompatActivity {
     Spinner fachSpinner;
     Spinner lehrerSpinner;
     Spinner raumSpinner;
-//
+
     DatabaseHelper myDb;
 
     Cursor res;

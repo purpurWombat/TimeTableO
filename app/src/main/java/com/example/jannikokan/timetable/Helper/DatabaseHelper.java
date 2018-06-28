@@ -280,17 +280,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public boolean speicherStunde(String fachKuerzel, String lehrerKuerzel, String raumNummer){
         SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(UNTERRICHTSSTUNDE_FACH, fachKuerzel);
-        contentValues.put(UNTERRICHTSSTUNDE_LEHRER, lehrerKuerzel);
-        contentValues.put(UNTERRICHTSSTUNDE_RAUM, raumNummer);
-        long result = db.insert(TABLE_UNTERRICHTSSTUNDEN, null, contentValues);
-        if (result == -1){
-            return  false;
-        }
-        else {
-            return  true;
-        }
+        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR10',NULL,NULL,NULL)");
     }
 
 
