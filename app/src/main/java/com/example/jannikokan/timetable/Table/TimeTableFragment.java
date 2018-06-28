@@ -129,6 +129,7 @@ public class TimeTableFragment extends Fragment {
 
 String a ;
     String b ;
+    String c;
         TextView Lehrer;
 
         TextView Raum;
@@ -144,6 +145,7 @@ String a ;
         myTL = view.findViewById(R.id.tableLayoutTage);
         MO1 = view.findViewById(R.id.MO1);
        VGMO1 = view.findViewById(R.id.MO1);
+       DI1 = view.findViewById(R.id.DI1);
 
         DI1 = view.findViewById(R.id.DI1);
         FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
@@ -152,7 +154,15 @@ String a ;
         FachDI1 = (TextView) DI1.findViewById(R.id.textViewFach);
         stundeZuweisen = new StundeZuweisen();
 
-
+DI1.setOnLongClickListener(new View.OnLongClickListener() {
+    @Override
+    public boolean onLongClick(View v) {
+        schreibeInArray("MO1", "O", " k" , " z");
+        arrayToString();
+        schreibeInTV(a , b , c);
+        return false;
+    }
+});
 
 
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
@@ -175,10 +185,7 @@ String a ;
 
 
          arrayToString();
-        schreibeInTV(Montag1);
 
-        arrayToString();
-        schreibeInTV(Montag1);
 
         return view;
     }
@@ -187,6 +194,9 @@ String a ;
 
         a = Montag1[1];
         b = Montag1[2];
+        c = Montag1[0];
+
+
 
 Log.d(TAG, ""+ a + b);
 
@@ -224,12 +234,12 @@ Log.d(TAG, ""+ a + b);
 
     }
 
-    public void schreibeInTV (String[] Stunde){
+    public void schreibeInTV (String a , String b , String c ){
 
 
                    FachMO1.setText(a);
-                   LehrerMO1.setText("b");
-                   RaumMO1.setText("s");
+                   LehrerMO1.setText(b);
+                   RaumMO1.setText(b);
             Log.d(TAG, "schreibeInTV: korrekt");
 
 
