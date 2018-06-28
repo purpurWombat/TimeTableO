@@ -141,6 +141,8 @@ String a = "b";
 
 
 
+
+
         
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -156,6 +158,9 @@ String a = "b";
 
         return view;
     }
+
+
+
 
 
 

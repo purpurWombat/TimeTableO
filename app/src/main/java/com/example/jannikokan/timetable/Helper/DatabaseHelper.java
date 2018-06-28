@@ -9,6 +9,8 @@ import android.util.Log;
 
 import com.example.jannikokan.timetable.Edit.EditActivity;
 
+import java.net.ConnectException;
+
 public class DatabaseHelper extends SQLiteOpenHelper {
 
         public static final String DATABASE_NAME = "Stundenplan.db";
@@ -280,7 +282,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public boolean speicherStunde(String fachKuerzel, String lehrerKuerzel, String raumNummer){
         SQLiteDatabase db = this.getWritableDatabase();
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR10',NULL,NULL,NULL)");
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(UNTERRICHTSSTUNDE_FACH,fachKuerzel);
+        contentValues.put(UNTERRICHTSSTUNDE_LEHRER, lehrerKuerzel);
+        contentValues.put(UNTERRICHTSSTUNDE_RAUM, raumNummer);
+        db.update(TABLE_UNTERRICHTSSTUNDEN, contentValues, UNTERRICHTSSTUNDE_ID + "= MO1", null);
+
     }
 
 
