@@ -1,9 +1,12 @@
 package com.example.jannikokan.timetable.Table;
 
+import android.content.Intent;
 import android.database.Cursor;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,6 +22,7 @@ import java.util.ArrayList;
 
 
 public class StundeZuweisen extends AppCompatActivity {
+    private static final String TAG = "StundeZuweisen";
 
     Spinner fachSpinner;
     Spinner lehrerSpinner;
@@ -69,7 +73,9 @@ public class StundeZuweisen extends AppCompatActivity {
 
         timeTableFragment = new TimeTableFragment();
 
-
+        Intent intent = getIntent();
+        String ViewID = intent.getExtras().getString("ViewID");
+        Log.d(TAG , "" + ViewID);
 
 
 
@@ -85,6 +91,7 @@ public class StundeZuweisen extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 fachSpinnerText = fachSpinner.getSelectedItem().toString();
+                Log.d(TAG , ""+ fachSpinnerText);
             }
 
             @Override

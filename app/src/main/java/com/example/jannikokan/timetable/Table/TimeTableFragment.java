@@ -134,7 +134,7 @@ String a = "b";
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_timetable, container ,false);
         myTL = view.findViewById(R.id.tableLayoutTage);
@@ -152,9 +152,10 @@ String a = "b";
                 String ViewID = getResources().getResourceName(view.getId());
                 String IDfinal = cutID(ViewID);
 
-Log.d(TAG, ""+ IDfinal);
+            Log.d(TAG, ""+ IDfinal);
 
                 Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
                 startActivity(intent);
                 return true;
             }
