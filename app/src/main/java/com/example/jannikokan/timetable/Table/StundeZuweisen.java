@@ -1,6 +1,5 @@
 package com.example.jannikokan.timetable.Table;
 
-import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -43,8 +42,8 @@ public class StundeZuweisen extends AppCompatActivity {
 
     Button buttonStundeZuweisen;
 
+    TimeTableFragment timeTableFragment;
 
-String a ;
 
 
 
@@ -53,6 +52,7 @@ String a ;
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stunde_zuweisen);
+
 
 
         myDb = new DatabaseHelper(this);
@@ -67,6 +67,8 @@ String a ;
         raumAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, raumListe);
         buttonStundeZuweisen = findViewById(R.id.buttonStundeZuweisen);
 
+        timeTableFragment = new TimeTableFragment();
+
 
 
 
@@ -75,6 +77,7 @@ String a ;
         zeigeSpinnerFaecher();
         zeigeSpinnerLehrer();
         zeigeSpinnerRaum();
+        getFachSpinnerText();
 
 
 
@@ -82,15 +85,15 @@ String a ;
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 fachSpinnerText = fachSpinner.getSelectedItem().toString();
-
             }
-
 
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });
+
+
 
         lehrerSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -117,15 +120,16 @@ String a ;
         });
 
 
-
         buttonStundeZuweisen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                boolean istGespeichert = myDb.speicherStunde(fachSpinnerText, lehrerSpinnerText, raumSpinnerText);
+                /*boolean istGespeichert = myDb.speicherStunde(fachSpinnerText, lehrerSpinnerText, raumSpinnerText);
                 if (istGespeichert == true){
                     Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
+                }*/
 
-                }
+                timeTableFragment.setzeTextViewFachMO1();
+
 
             }
         });
@@ -176,10 +180,9 @@ String a ;
 
     }
 
-
-
-
-
+    public String getFachSpinnerText() {
+        return fachSpinnerText;
     }
+}
 
 

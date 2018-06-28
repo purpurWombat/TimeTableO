@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -129,6 +128,8 @@ String a = "b";
 
         TextView Raum;
 
+        StundeZuweisen stundeZuweisen;
+
 
     @Nullable
     @Override
@@ -140,57 +141,24 @@ String a = "b";
        VGMO1 = view.findViewById(R.id.MO1);
 
         DI1 = view.findViewById(R.id.DI1);
-       FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
+        FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
         FachDI1 = (TextView) DI1.findViewById(R.id.textViewFach);
+        stundeZuweisen = new StundeZuweisen();
 
-
-
-
-
-
-
-
-      //  FachMO1.setText(myDb.getFachMO1());
-        
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
-                String viewID = getResources().getResourceName(view.getId());
-                String cutID = getIDs(viewID);
-
-                Log.d(TAG, "onLongClick: " + cutID);
-
                 Intent intent = new Intent(getActivity(), StundeZuweisen.class);
                 startActivity(intent);
                 return true;
             }
         });
-
-
-
-        
-
-
         return view;
     }
 
 
-
-
-
-public String getIDs (String IDView){
-
-    if (IDView.length() == 3) {
-        return IDView;
-    } else if (IDView.length() > 3) {
-        return IDView.substring(IDView.length() - 3);}
-
-    return IDView;
-}
-
-    public void setMontag1 (String MOF){
-        FachMO1.setText(MOF);
-
+    public void setzeTextViewFachMO1() {
+        FachMO1.setText(stundeZuweisen.getFachSpinnerText());
     }
 
 
