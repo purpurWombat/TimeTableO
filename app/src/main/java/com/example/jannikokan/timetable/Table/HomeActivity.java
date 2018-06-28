@@ -27,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
     ViewPager myViewPager;
 
 //test
+    //okan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
