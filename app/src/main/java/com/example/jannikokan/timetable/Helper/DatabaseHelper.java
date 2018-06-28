@@ -287,6 +287,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(UNTERRICHTSSTUNDE_LEHRER, lehrerKuerzel);
         contentValues.put(UNTERRICHTSSTUNDE_RAUM, raumNummer);
         db.update(TABLE_UNTERRICHTSSTUNDEN, contentValues, UNTERRICHTSSTUNDE_ID + "= MO1", null);
+        return true;
 
     }
 
