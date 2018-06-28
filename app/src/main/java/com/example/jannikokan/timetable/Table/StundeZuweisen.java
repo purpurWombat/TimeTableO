@@ -75,6 +75,7 @@ public class StundeZuweisen extends AppCompatActivity {
         zeigeSpinnerRaum();
 
 
+
         fachSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
@@ -111,6 +112,8 @@ public class StundeZuweisen extends AppCompatActivity {
             }
         });
 
+
+
         buttonStundeZuweisen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -123,6 +126,7 @@ public class StundeZuweisen extends AppCompatActivity {
 
             }
         });
+
 
 
     }

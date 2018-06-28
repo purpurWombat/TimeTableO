@@ -149,7 +149,7 @@ String a = "b";
 
 
 
-        FachMO1.setText("Okan");
+        FachMO1.setText(myDb.getFachMO1());
         
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
