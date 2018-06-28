@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -148,6 +149,11 @@ String a = "b";
         VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                String IDfinal = cutID(ViewID);
+
+Log.d(TAG, ""+ IDfinal);
+
                 Intent intent = new Intent(getActivity(), StundeZuweisen.class);
                 startActivity(intent);
                 return true;
@@ -157,7 +163,17 @@ String a = "b";
     }
 
 
-    public void setzeTextViewFachMO1() {
+    public String cutID(String longID) {
+        if (longID.length() == 3) {
+            return longID;
+        } else if (longID.length() > 3) {
+            return longID.substring(longID.length() - 3);
+        }
+        return longID;
+    }
+
+
+    public void setzeTextViewFachMO1(){
         FachMO1.setText(stundeZuweisen.getFachSpinnerText());
     }
 
