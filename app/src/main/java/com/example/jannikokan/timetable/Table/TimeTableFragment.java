@@ -1,6 +1,7 @@
 package com.example.jannikokan.timetable.Table;
 
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -128,6 +129,15 @@ public class TimeTableFragment extends Fragment {
     StundeZuweisen stundeZuweisen;
 
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Log.d(TAG, ""+resultCode + requestCode);
+        if( resultCode == Activity.RESULT_OK && requestCode == 0){
+            String arr[] = data.getStringArrayExtra("result");
+            schreibeInTV(arr[0], arr[1], arr[2]);
+        }
+    }
+
     @Nullable
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -163,15 +173,18 @@ public class TimeTableFragment extends Fragment {
                 String ViewID = getResources().getResourceName(view.getId());
                 IDfinal = cutID(ViewID);
 
-
                 Log.d(TAG, "" + IDfinal);
 
                 Intent intent = new Intent(getActivity(), StundeZuweisen.class);
                 intent.putExtra("ViewID", IDfinal);
-                startActivity(intent);
+
+                startActivityForResult(intent, 0);
                 return true;
             }
         });
+
+
+
 
 
         //arrayToString();
@@ -180,13 +193,13 @@ public class TimeTableFragment extends Fragment {
         return view;
     }
 
-    /*private void arrayToString() {
+    private void arrayToString() {
         a = Montag1[1];
         b = Montag1[2];
         c = Montag1[0];
         Log.d(TAG, "" + a + b);
     }
-*/
+
 
     public String cutID(String longID) {
         if (longID.length() == 3) {
@@ -202,15 +215,8 @@ public class TimeTableFragment extends Fragment {
         FachMO1.setText(stundeZuweisen.getFachSpinnerText());
     }
 
-    public void schreibeInArray(String ID, String FKZ, String LKZ, String RKZ) {
-        if (ID.equals("MO1")) {
-            Montag1[0] = FKZ;
-            Montag1[1] = LKZ;
-            Montag1[2] = RKZ;
-            Log.d(TAG, "schreibeInArray: korrekt" + Montag1[0] + Montag1[1] + Montag1[2]);
-        } else {
-            Log.d(TAG, "schreibeInArray: fail");
-        }
+    public void schreibeInArray(String Stunde) {
+        FachMO1.setText(Stunde);
     }
 
     public void schreibeInTV(String a, String b, String c) {

@@ -4,7 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Note.NoteActivity">
+    tools:context=".Table.HomeActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <!-- mittel -->
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+
+            <include layout="@layout/layout_center_viewpager" />
+
+
+        </RelativeLayout>
+
+
+        <!-- bottom nav -->
+        <include layout="@layout/layout_bottom_navigation" />
+
+
+    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>

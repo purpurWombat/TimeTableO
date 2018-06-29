@@ -1,5 +1,6 @@
 package com.example.jannikokan.timetable.Table;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.nfc.Tag;
@@ -62,7 +63,6 @@ public class StundeZuweisen extends AppCompatActivity {
         setContentView(R.layout.activity_stunde_zuweisen);
 
 
-
         myDb = new DatabaseHelper(this);
         fachSpinner = findViewById(R.id.spinnerFaecher);
         lehrerSpinner = findViewById(R.id.spinnerLehrer);
@@ -77,12 +77,6 @@ public class StundeZuweisen extends AppCompatActivity {
 
         timeTableFragment = new TimeTableFragment();
 
-        Intent intent = getIntent();
-        final String ViewID = intent.getExtras().getString("ViewID");
-        Log.d(TAG , "" + ViewID);
-
-
-
 
         zeigeSpinnerFaecher();
         zeigeSpinnerLehrer();
@@ -90,12 +84,11 @@ public class StundeZuweisen extends AppCompatActivity {
         getFachSpinnerText();
 
 
-
         fachSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 fachSpinnerText = fachSpinner.getSelectedItem().toString();
-                Log.d(TAG , ""+ fachSpinnerText);
+                Log.d(TAG, "" + fachSpinnerText);
 
             }
 
@@ -104,7 +97,6 @@ public class StundeZuweisen extends AppCompatActivity {
 
             }
         });
-
 
 
         lehrerSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -138,21 +130,26 @@ public class StundeZuweisen extends AppCompatActivity {
                 String FKZ = fachSpinnerText;
                 String LKZ = lehrerSpinnerText;
                 String RKZ = raumSpinnerText;
-                Log.d(TAG, "" + ViewID + FKZ + LKZ + RKZ);
-                timeTableFragment.schreibeInArray(ViewID, FKZ,LKZ,RKZ);
+                Log.d(TAG, "" + FKZ + LKZ + RKZ);
+                //timeTableFragment.schreibeInArray(ViewID, FKZ,LKZ,RKZ);
+
+                Intent returnIntent = new Intent();
+                returnIntent.putExtra("result", (new String[]{FKZ, LKZ, RKZ}));
+
+                setResult(Activity.RESULT_OK, returnIntent);
+                finish();
+
 
                 Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
 
-                /*boolean istGespeichert =  myDb.speicherStunde(ViewID, FKZ, LKZ , RKZ);
-                if (istGespeichert == true){
-                    Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
-                }*/
+            /*boolean istGespeichert =  myDb.speicherStunde(ViewID, FKZ, LKZ , RKZ);
+            if (istGespeichert == true){
+                Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
+            }*/
             }
         });
-
-
-
     }
+
 
     public void zeigeSpinnerFaecher(){
 

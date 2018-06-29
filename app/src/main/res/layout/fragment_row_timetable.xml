@@ -453,7 +453,7 @@
 
                 <RelativeLayout android:layout_width="60dp">
 
-                    <include layout="@layout/fragment_timetable_stunde" />
+                    <include layout="@layout/fragment_montag_eins" />
                 </RelativeLayout>
 
 
