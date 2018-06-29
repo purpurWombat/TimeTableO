@@ -121,6 +121,7 @@ public class TimeTableFragment extends Fragment {
     String IDfinal;
     String Montag1[] = {"-", " - ", " -","-"};
     String Dienstag1[] = {"-", "-", "-","-"};
+    String Holder[]= {"-", "-", "-","-"};
 
     String a;
     String b;
@@ -128,7 +129,7 @@ public class TimeTableFragment extends Fragment {
     TextView Lehrer;
 
     TextView Raum;
-    String montag;
+    String montag ;
 
     StundeZuweisen stundeZuweisen;
 
@@ -236,7 +237,7 @@ public class TimeTableFragment extends Fragment {
     }
 
     public void schreibeInTV() {
-         Montag1 =loadArray(montag, getActivity());
+         Montag1 = loadArray(montag, getActivity());
 
 
         FachMO1.setText(Montag1[0]);
@@ -261,14 +262,14 @@ public class TimeTableFragment extends Fragment {
         if (d.contains("MO")) {
             switch (d) {
                 case "MO1": {
-                    Montag1[0] = a;
-                    Montag1[1] = b;
-                    Montag1[2] = c;
-                    Montag1[3] = d;
+                   Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                  Holder[3] = d;
                     schreibeInTV();
                     String FachMO1Test = FachMO1.getText().toString();
                     Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
-                    saveArray(Montag1, montag, getActivity());
+                    saveArray(Holder, montag, getActivity());
                     break;
                 }
 
