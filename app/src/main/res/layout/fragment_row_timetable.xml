@@ -426,6 +426,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MO6"
                     >
 
                     <include layout="@layout/fragment_timetable_stunde" />
@@ -433,25 +434,29 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DI6">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MI6">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DO6">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/FR6">
 
                     <include layout="@layout/fragment_timetable_stunde" />
                 </RelativeLayout>
@@ -512,6 +517,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MO7"
                     >
 
                     <include layout="@layout/fragment_timetable_stunde" />
@@ -519,25 +525,29 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DI7">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MI7">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DO7">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/FR7">
 
                     <include layout="@layout/fragment_timetable_stunde" />
                 </RelativeLayout>
@@ -587,6 +597,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MO8"
                     >
 
                     <include layout="@layout/fragment_timetable_stunde" />
@@ -594,25 +605,29 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DI8">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MI8">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DO8">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/FR8">
 
                     <include layout="@layout/fragment_timetable_stunde" />
                 </RelativeLayout>
@@ -665,6 +680,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MO9"
                     >
 
                     <include layout="@layout/fragment_timetable_stunde" />
@@ -672,25 +688,29 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DI9">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MI9">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DO9">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/FR9">
 
                     <include layout="@layout/fragment_timetable_stunde" />
                 </RelativeLayout>
@@ -741,6 +761,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MO0"
                     >
 
                     <include layout="@layout/fragment_timetable_stunde" />
@@ -748,25 +769,29 @@
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DI0">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/MI0">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/DO0">
 
                     <include layout="@layout/fragment_timetable_stunde" />
 
                 </RelativeLayout>
 
-                <RelativeLayout android:layout_width="60dp">
+                <RelativeLayout android:layout_width="60dp"
+                    android:id="@+id/FR0">
 
                     <include layout="@layout/fragment_timetable_stunde" />
                 </RelativeLayout>
