@@ -12,15 +12,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.example.jannikokan.timetable.Helper.DatabaseHelper;
 import com.example.jannikokan.timetable.R;
-
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 public class TimeTableFragment extends Fragment {
     private static final String TAG = "TimeTableFragment";
@@ -30,11 +26,11 @@ public class TimeTableFragment extends Fragment {
 
 
     // Initialisierung der Text Views von der Ersten Stunde von jedem Tag
-    ViewGroup VGMO1;
-    RelativeLayout MO1;
+    ViewGroup MO1;
+
     ViewGroup DI1;
     ViewGroup MI1;
-    ViewGroup D01;
+    ViewGroup DO1;
     ViewGroup FR1;
 
     TextView FachMO1;
@@ -119,15 +115,21 @@ public class TimeTableFragment extends Fragment {
     ViewGroup FR10;
 
     String IDfinal;
+
+    String Holder[] = {"-", "-", "-", "-"};
     String Montag1[] = {"-", " - ", " -", "-"};
     String Dienstag1[] = {"-", "-", "-", "-"};
     String Mittwoch1[] = {"-", "-", "-", "-"};
-    String Holder[] = {"-", "-", "-", "-"};
+    String Donnerstag1[] =  {"-", "-", "-", "-"};
+    String Freitag1 [] =  {"-", "-", "-", "-"};
 
 
-    String montagtest[] = {"-", "-", "-", "-"};
-    String dienstagtest[] = {"-", "-", "-", "-"};
-    String mittwochtest[] = {"-", "-", "-", "-"};
+
+    String montagtest1[] = {"-", "-", "-", "-"};
+    String dienstagtest1[] = {"-", "-", "-", "-"};
+    String mittwochtest1[] = {"-", "-", "-", "-"};
+    String donnerstagtest1[] = {"-", "-", "-", "-"};
+    String freittagtest1 [] =  {"-", "-", "-", "-"};
 
     String a;
     String b;
@@ -135,9 +137,11 @@ public class TimeTableFragment extends Fragment {
     TextView Lehrer;
 
     TextView Raum;
-    String montag = "Montag";
-    String dienstag = "Dienstag";
-    String mittwoch = "Mittwoch";
+    String montag1 = "Montag1";
+    String dienstag1 = "Dienstag1";
+    String mittwoch1 = "Mittwoch1";
+    String donnerstag1 = "Donnerstag1";
+    String freitag1 = "Freitag1";
 
     StundeZuweisen stundeZuweisen;
 
@@ -157,15 +161,17 @@ public class TimeTableFragment extends Fragment {
 
         final View view = inflater.inflate(R.layout.fragment_timetable, container, false);
         myTL = view.findViewById(R.id.tableLayoutTage);
+
         MO1 = view.findViewById(R.id.MO1);
-        VGMO1 = view.findViewById(R.id.MO1);
-        MI1 = view.findViewById(R.id.MI1);
         DI1 = view.findViewById(R.id.DI1);
+        MI1 = view.findViewById(R.id.MI1);
+        DO1 = view.findViewById(R.id.DO1);
+        FR1 = view.findViewById(R.id.FR1);
 
 
-        FachMO1 = (TextView) VGMO1.findViewById(R.id.textViewFach);
-        LehrerMO1 = (TextView) VGMO1.findViewById(R.id.textViewLehrer);
-        RaumMO1 = (TextView) VGMO1.findViewById(R.id.textViewRaum);
+        FachMO1 = (TextView) MO1.findViewById(R.id.textViewFach);
+        LehrerMO1 = (TextView) MO1.findViewById(R.id.textViewLehrer);
+        RaumMO1 = (TextView) MO1.findViewById(R.id.textViewRaum);
 
         FachDI1 = (TextView) DI1.findViewById(R.id.textViewFach);
         LehrerDI1 = (TextView) DI1.findViewById(R.id.textViewLehrer);
@@ -175,10 +181,41 @@ public class TimeTableFragment extends Fragment {
         LehrerMI1 = (TextView) MI1.findViewById(R.id.textViewLehrer);
         RaumMI1 = (TextView) MI1.findViewById(R.id.textViewRaum);
 
+        FachDO1 = (TextView) DO1.findViewById(R.id.textViewFach);
+        LehrerDO1 = (TextView) DO1.findViewById(R.id.textViewLehrer);
+        RaumDO1 = (TextView) DO1.findViewById(R.id.textViewRaum);
+
+        FachFR1 = (TextView) FR1.findViewById(R.id.textViewFach);
+        LehrerFR1 = (TextView) FR1.findViewById(R.id.textViewLehrer);
+        RaumFR1 = (TextView) FR1.findViewById(R.id.textViewRaum);
+
+
+
 
         stundeZuweisen = new StundeZuweisen();
 
         schreibeInTV();
+
+
+
+
+        MO1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
 
         DI1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -212,8 +249,7 @@ public class TimeTableFragment extends Fragment {
             }
         });
 
-
-        VGMO1.setOnLongClickListener(new View.OnLongClickListener() {
+        DO1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 String ViewID = getResources().getResourceName(view.getId());
@@ -228,6 +264,26 @@ public class TimeTableFragment extends Fragment {
                 return true;
             }
         });
+
+        FR1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+
         return view;
     }
 
@@ -245,19 +301,28 @@ public class TimeTableFragment extends Fragment {
 
 
     public void schreibeInTV() {
-        montagtest = loadArray(montag, getActivity());
-        dienstagtest = loadArray(dienstag, getActivity());
-        mittwochtest = loadArray(mittwoch, getActivity());
+        montagtest1 = loadArray(montag1, getActivity());
+        dienstagtest1 = loadArray(dienstag1, getActivity());
+        mittwochtest1 = loadArray(mittwoch1, getActivity());
+        donnerstagtest1 = loadArray(donnerstag1,getActivity());
+        freittagtest1 = loadArray(freitag1,getActivity());
 
-        if (montagtest.length > 0) {
-            Montag1 = montagtest;
+        if (montagtest1.length > 0) {
+            Montag1 = montagtest1;
         }
 
-        if (dienstagtest.length > 0) {
-            Dienstag1 = dienstagtest;
+        if (dienstagtest1.length > 0) {
+            Dienstag1 = dienstagtest1;
         }
-        if (mittwochtest.length > 0) {
-            Mittwoch1 = mittwochtest;
+        if (mittwochtest1.length > 0) {
+            Mittwoch1 = mittwochtest1;
+        }
+        if (donnerstagtest1.length > 0) {
+            Donnerstag1 = donnerstagtest1;
+        }
+
+        if (mittwochtest1.length > 0) {
+            Freitag1 = freittagtest1;
         }
 
         //    Montag1 = loadArray(montag, getActivity());
@@ -278,6 +343,17 @@ public class TimeTableFragment extends Fragment {
         LehrerMI1.setText(Mittwoch1[1]);
         RaumMI1.setText(Mittwoch1[2]);
 
+
+        FachDO1.setText(Donnerstag1[0]);
+        LehrerDO1.setText(Donnerstag1[1]);
+        RaumDO1.setText(Donnerstag1[2]);
+
+
+        FachFR1.setText(Freitag1[0]);
+        LehrerFR1.setText(Freitag1[1]);
+        RaumFR1.setText(Freitag1[2]);
+
+
         String FachMO1Test = FachMO1.getText().toString();
         Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
     }
@@ -295,7 +371,7 @@ public class TimeTableFragment extends Fragment {
                     schreibeInTV();
                     String FachMO1Test = FachMO1.getText().toString();
                     Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
-                    saveArray(Holder, montag, getActivity());
+                    saveArray(Holder, montag1, getActivity());
                     break;
                 }
 
@@ -320,7 +396,7 @@ public class TimeTableFragment extends Fragment {
                     Holder[2] = c;
                     Holder[3] = d;
                     schreibeInTV();
-                    saveArray(Holder, dienstag, getActivity());
+                    saveArray(Holder, dienstag1, getActivity());
                     break;
                 }
             }
@@ -332,7 +408,31 @@ public class TimeTableFragment extends Fragment {
                     Holder[2] = c;
                     Holder[3] = d;
                     schreibeInTV();
-                    saveArray(Holder, mittwoch, getActivity());
+                    saveArray(Holder, mittwoch1, getActivity());
+                    break;
+                }
+            }
+        }else if (d.contains("DO")) {
+            switch (d) {
+                case "DO1": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, donnerstag1, getActivity());
+                    break;
+                }
+            }
+        }else if (d.contains("FR")) {
+            switch (d) {
+                case "FR1": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, freitag1, getActivity());
                     break;
                 }
             }
