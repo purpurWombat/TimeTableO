@@ -2199,6 +2199,85 @@ public class TimeTableFragment extends Fragment {
         RaumFR7.setText(Freitag7[2]);
 
 
+        // achte stunden
+
+        FachMO8.setText(Montag8[0]);
+        LehrerMO8.setText(Montag8[1]);
+        RaumMO8.setText(Montag8[2]);
+
+
+        FachDI8.setText(Dienstag8[0]);
+        LehrerDI8.setText(Dienstag8[1]);
+        RaumDI8.setText(Dienstag8[2]);
+
+        FachMI8.setText(Mittwoch8[0]);
+        LehrerMI8.setText(Mittwoch8[1]);
+        RaumMI8.setText(Mittwoch8[2]);
+
+
+        FachDO8.setText(Donnerstag8[0]);
+        LehrerDO8.setText(Donnerstag8[1]);
+        RaumDO8.setText(Donnerstag8[2]);
+
+
+        FachFR8.setText(Freitag8[0]);
+        LehrerFR8.setText(Freitag8[1]);
+        RaumFR8.setText(Freitag8[2]);
+
+
+        // neunte stunden
+
+        FachMO9.setText(Montag9[0]);
+        LehrerMO9.setText(Montag9[1]);
+        RaumMO9.setText(Montag9[2]);
+
+
+        FachDI9.setText(Dienstag9[0]);
+        LehrerDI9.setText(Dienstag9[1]);
+        RaumDI9.setText(Dienstag9[2]);
+
+        FachMI9.setText(Mittwoch9[0]);
+        LehrerMI9.setText(Mittwoch9[1]);
+        RaumMI9.setText(Mittwoch9[2]);
+
+
+        FachDO9.setText(Donnerstag9[0]);
+        LehrerDO9.setText(Donnerstag9[1]);
+        RaumDO9.setText(Donnerstag9[2]);
+
+
+        FachFR9.setText(Freitag9[0]);
+        LehrerFR9.setText(Freitag9[1]);
+        RaumFR9.setText(Freitag9[2]);
+
+
+        // zehnte stunden
+
+        FachMO0.setText(Montag0[0]);
+        LehrerMO0.setText(Montag0[1]);
+        RaumMO0.setText(Montag0[2]);
+
+
+        FachDI0.setText(Dienstag0[0]);
+        LehrerDI0.setText(Dienstag0[1]);
+        RaumDI0.setText(Dienstag0[2]);
+
+        FachMI0.setText(Mittwoch0[0]);
+        LehrerMI0.setText(Mittwoch0[1]);
+        RaumMI0.setText(Mittwoch0[2]);
+
+
+        FachDO0.setText(Donnerstag0[0]);
+        LehrerDO0.setText(Donnerstag0[1]);
+        RaumDO0.setText(Donnerstag0[2]);
+
+
+        FachFR0.setText(Freitag0[0]);
+        LehrerFR0.setText(Freitag0[1]);
+        RaumFR0.setText(Freitag0[2]);
+
+
+
 
 
 
@@ -2267,6 +2346,61 @@ public class TimeTableFragment extends Fragment {
                     break;
                 }
 
+                case "MO6": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, montag6, getActivity());
+
+                    break;
+                }
+
+                case "MO7": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, montag7, getActivity());
+
+                    break;
+                }
+
+                case "MO8": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, montag8, getActivity());
+
+                    break;
+                }
+                case "MO9": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, montag9, getActivity());
+
+                    break;
+                }
+
+                case "MO0": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, montag0, getActivity());
+
+                    break;
+                }
+
+
 
             }
 
@@ -2324,6 +2458,59 @@ public class TimeTableFragment extends Fragment {
                     break;
                 }
 
+                case "DI6": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, dienstag6, getActivity());
+                    break;
+                }
+
+                case "DI7": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, dienstag7, getActivity());
+                    break;
+                }
+
+
+                case "DI8": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, dienstag8, getActivity());
+                    break;
+                }
+
+                case "DI9": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, dienstag9, getActivity());
+                    break;
+                }
+
+                case "DI0": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, dienstag0, getActivity());
+                    break;
+                }
+
+
+
 
 
             }
@@ -2377,6 +2564,63 @@ public class TimeTableFragment extends Fragment {
                     saveArray(Holder, mittwoch5, getActivity());
                     break;
                 }
+
+
+                case "MI6": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, mittwoch6, getActivity());
+                    break;
+                }
+
+                case "MI7": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, mittwoch7, getActivity());
+                    break;
+                }
+
+
+                case "MI8": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, mittwoch8, getActivity());
+                    break;
+                }
+
+                case "MI9": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, mittwoch9, getActivity());
+                    break;
+                }
+
+
+                case "MI0": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, mittwoch0, getActivity());
+                    break;
+                }
+
+
+
+
 
 
 
@@ -2436,6 +2680,57 @@ public class TimeTableFragment extends Fragment {
                 }
 
 
+                case "DO6": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, donnerstag6, getActivity());
+                    break;
+                }
+
+                case "DO7": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, donnerstag7, getActivity());
+                    break;
+                }
+
+                case "DO8": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, donnerstag8, getActivity());
+                    break;
+                }
+
+                case "DO9": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, donnerstag9, getActivity());
+                    break;
+                }
+
+                case "DO0": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, donnerstag0, getActivity());
+                    break;
+                }
+
+
 
             }
         }else if (d.contains("FR")) {
@@ -2491,6 +2786,56 @@ public class TimeTableFragment extends Fragment {
                     break;
                 }
 
+                case "FR6": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, freitag6, getActivity());
+                    break;
+                }
+
+                case "FR7": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, freitag7, getActivity());
+                    break;
+                }
+
+                case "FR8": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, freitag8, getActivity());
+                    break;
+                }
+
+                case "FR9": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, freitag9, getActivity());
+                    break;
+                }
+
+
+                case "FR0": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, freitag0, getActivity());
+                    break;
+                }
 
 
             }
