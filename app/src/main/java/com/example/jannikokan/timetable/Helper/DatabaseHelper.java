@@ -31,17 +31,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String RAUM_ID = "ID_RAUM";
     public static final String RAUM_NUMMER = "RAUMNUMMER";
     public static final String RAUM_ART = "RAUMART";
-    public static final String TABLE_UNTERRICHTSSTUNDEN = "Unterrichtsstunden_table";
-    public static final String UNTERRICHTSSTUNDE_ID = "UNTERRICHTSSTUNDEID";
-    public static final String UNTERRICHTSSTUNDE_FACH = "FachNr";
-    public static final String UNTERRICHTSSTUNDE_LEHRER = "LehrerNr";
-    public static final String UNTERRICHTSSTUNDE_RAUM = "RaumNr";
+
 
 
     private static final String create_Table2 = "create table " + TABLE_LEHRER + "(" + LEHRERID + " INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME + " TEXT," + LEHRERKUERZEL + " TEXT," + LEHRERMAIL + " TEXT)";
     private static final String create_Table = "create table " + TABLE_NAME + "(" + FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME + " TEXT," + FACH_KUERZEL + " TEXT)";
     private static final String create_TableRaum = "create table " + TABLE_RAUM + "(" + RAUM_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + RAUM_NUMMER + " TEXT," + RAUM_ART + " TEXT)";
-    private static final String create_TableUnterrichtsstunden = "create table " + TABLE_UNTERRICHTSSTUNDEN + "(" + UNTERRICHTSSTUNDE_ID + " TEXT PRIMARY KEY," + UNTERRICHTSSTUNDE_FACH + " TEXT," + UNTERRICHTSSTUNDE_LEHRER + " TEXT," + UNTERRICHTSSTUNDE_RAUM + " TEXT)";
+
 
 
     public DatabaseHelper(Context context) {
@@ -57,60 +53,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(create_Table);
         db.execSQL(create_Table2);
         db.execSQL(create_TableRaum);
-        db.execSQL(create_TableUnterrichtsstunden);
+
 
 
         //IDs für einzelne Stunden werden in Tabelle Unterrichtsstunden eingetragen
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO1',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO2',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO3',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO4',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO5',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO6',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO7',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO8',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO9',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MO10',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI1',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI2',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI3',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI4',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI5',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI6',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI7',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI8',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI9',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DI10',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI1',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI2',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI3',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI4',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI5',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI6',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI7',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI8',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI9',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('MI10',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO1',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO2',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO3',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO4',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO5',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO6',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO7',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO8',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO9',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('DO10',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR1',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR2',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR3',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR4',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR5',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR6',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR7',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR8',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR9',NULL,NULL,NULL)");
-        db.execSQL("INSERT INTO `Unterrichtsstunden_table` VALUES ('FR10',NULL,NULL,NULL)");
 
     }
 
@@ -122,7 +68,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_LEHRER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_RAUM);
-        db.execSQL("DROP TABLE IF EXISTS " + TABLE_UNTERRICHTSSTUNDEN);
+
         onCreate(db);
         Log.d("MeineAPP", "in upgrade");
 
@@ -134,14 +80,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 TABLE_NAME,
                 TABLE_LEHRER,
                 TABLE_RAUM,
-                TABLE_UNTERRICHTSSTUNDEN
+
         };
 
         String[] table_create_statements = new String[]{
                 create_Table,
                 create_Table2,
                 create_TableRaum,
-                create_TableUnterrichtsstunden
+
         };
         erstelleTabellenDieNichtExistieren(benoetigte_tabellen, table_create_statements);
     }
@@ -214,7 +160,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-
+    /**
+     *
+     * @param raumNummer
+     * @param raumArt
+     * @return
+     */
     public boolean speichereRaum(String raumNummer, String raumArt) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -246,7 +197,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-
+    /**
+     *
+     * @return
+     */
     public Cursor zeigeLehrer() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_LEHRER, null);
@@ -266,25 +220,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
-    /**
-     * @param fachKuerzel
-     * @param lehrerKuerzel
-     * @param raumNummer
-     * @return
-     */
-    public boolean speicherStunde(String ID, String fachKuerzel, String lehrerKuerzel, String raumNummer) {
 
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(UNTERRICHTSSTUNDE_FACH, fachKuerzel);
-        contentValues.put(UNTERRICHTSSTUNDE_LEHRER, lehrerKuerzel);
-        contentValues.put(UNTERRICHTSSTUNDE_RAUM, raumNummer);
-        long result = db.update(TABLE_UNTERRICHTSSTUNDEN, contentValues, UNTERRICHTSSTUNDE_ID + "=" + ID, null);
-        if (result == -1) {
-            return false;
-        } else {
-            return true;
-        }
+
 
 
     }
@@ -294,4 +231,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             //String query = "SELECT FachNr FROM Unterrichtsstunden_table WHERE UNTERRICHTSSTUNDEID = MO1";
              return db.execSQL("SELECT FachNr FROM Unterrichtsstunden_table WHERE UNTERRICHTSSTUNDEID = MO1");
     }*/
-}
+

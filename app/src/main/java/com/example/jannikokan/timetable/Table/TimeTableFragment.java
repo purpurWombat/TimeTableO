@@ -2,7 +2,9 @@ package com.example.jannikokan.timetable.Table;
 
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -126,6 +128,7 @@ public class TimeTableFragment extends Fragment {
     TextView Lehrer;
 
     TextView Raum;
+    String montag;
 
     StundeZuweisen stundeZuweisen;
 
@@ -159,6 +162,8 @@ public class TimeTableFragment extends Fragment {
         RaumDI1 = (TextView) DI1.findViewById(R.id.textViewRaum);
 
         stundeZuweisen = new StundeZuweisen();
+
+        schreibeInTV();
 
         DI1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
@@ -199,7 +204,7 @@ public class TimeTableFragment extends Fragment {
 
         //arrayToString();
 
-        schreibeInTV();
+
 
         return view;
     }
@@ -231,7 +236,7 @@ public class TimeTableFragment extends Fragment {
     }
 
     public void schreibeInTV() {
-
+         Montag1 =loadArray(montag, getActivity());
 
 
         FachMO1.setText(Montag1[0]);
@@ -263,6 +268,7 @@ public class TimeTableFragment extends Fragment {
                     schreibeInTV();
                     String FachMO1Test = FachMO1.getText().toString();
                     Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
+                    saveArray(Montag1, montag, getActivity());
                     break;
                 }
 
@@ -277,6 +283,8 @@ public class TimeTableFragment extends Fragment {
                     break;
                 }
             }
+
+
         } else if (d.contains("DI")) {
             switch (d) {
                 case "DI1": {
@@ -294,6 +302,27 @@ public class TimeTableFragment extends Fragment {
         }
 
 
+    }
+
+
+
+    public boolean saveArray(String[] array, String arrayName, Context mContext) {
+        SharedPreferences prefs = mContext.getSharedPreferences("preferencename", 0);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(arrayName +"_size", array.length);
+        for(int i=0;i<array.length;i++)
+            editor.putString(arrayName + "_" + i, array[i]);
+        return editor.commit();
+    }
+
+
+    public String[] loadArray(String arrayName, Context mContext) {
+        SharedPreferences prefs = mContext.getSharedPreferences("preferencename", 0);
+        int size = prefs.getInt(arrayName + "_size", 0);
+        String array[] = new String[size];
+        for(int i=0;i<size;i++)
+            array[i] = prefs.getString(arrayName + "_" + i, null);
+        return array;
     }
 }
 
