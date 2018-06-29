@@ -122,6 +122,7 @@ public class TimeTableFragment extends Fragment {
     String Montag1[] = {"-", " - ", " -","-"};
     String Dienstag1[] = {"-", "-", "-","-"};
     String Holder[]= {"-", "-", "-","-"};
+    String HolderD[]= {"-", "-", "-","-"};
 
     String a;
     String b;
@@ -129,7 +130,8 @@ public class TimeTableFragment extends Fragment {
     TextView Lehrer;
 
     TextView Raum;
-    String montag ;
+    String montag ="a";
+    String dienstag = "d";
 
     StundeZuweisen stundeZuweisen;
 
@@ -210,12 +212,7 @@ public class TimeTableFragment extends Fragment {
         return view;
     }
 
-    private void arrayToString() {
-        a = Montag1[1];
-        b = Montag1[2];
-        c = Montag1[0];
-        Log.d(TAG, "" + a + b);
-    }
+
 
 
     public String cutID(String longID) {
@@ -237,12 +234,16 @@ public class TimeTableFragment extends Fragment {
     }
 
     public void schreibeInTV() {
-         Montag1 = loadArray(montag, getActivity());
+        Montag1 = loadArray(montag, getActivity());
+
+         Dienstag1 = loadArray(dienstag,getActivity());
+
 
 
         FachMO1.setText(Montag1[0]);
         LehrerMO1.setText(Montag1[1]);
         RaumMO1.setText(Montag1[2]);
+
 
         FachDI1.setText(Dienstag1[0]);
         LehrerDI1.setText(Dienstag1[1]);
@@ -289,12 +290,12 @@ public class TimeTableFragment extends Fragment {
         } else if (d.contains("DI")) {
             switch (d) {
                 case "DI1": {
-                    Dienstag1[0] = a;
-                    Dienstag1[1] = b;
-                    Dienstag1[2] = c;
-                    Dienstag1[3] = d;
+                    HolderD[0] = a;
+                    HolderD[1] = b;
+                    HolderD[2] = c;
+                    HolderD[3] = d;
                     schreibeInTV();
-
+                    saveArray(HolderD, dienstag, getActivity());
                     break;
                 }
             }
