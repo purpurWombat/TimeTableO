@@ -117,8 +117,8 @@ public class TimeTableFragment extends Fragment {
     ViewGroup FR10;
 
     String IDfinal;
-    String Montag1[] = {"-", " - ", " -", "-"};
-    String Dienstag1[] = {"-", "-", "-", "-"};
+    String Montag1[] = {"-", " - ", " -","-"};
+    String Dienstag1[] = {"-", "-", "-","-"};
 
     String a;
     String b;
@@ -132,8 +132,8 @@ public class TimeTableFragment extends Fragment {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.d(TAG, "" + resultCode + requestCode);
-        if (resultCode == Activity.RESULT_OK && requestCode == 0) {
+        Log.d(TAG, ""+resultCode + requestCode);
+        if( resultCode == Activity.RESULT_OK && requestCode == 0){
             String arr[] = data.getStringArrayExtra("result");
             speicherArray(arr[0], arr[1], arr[2], arr[3]);
         }
@@ -194,6 +194,9 @@ public class TimeTableFragment extends Fragment {
         });
 
 
+
+
+
         //arrayToString();
 
         schreibeInTV();
@@ -230,6 +233,7 @@ public class TimeTableFragment extends Fragment {
     public void schreibeInTV() {
 
 
+
         FachMO1.setText(Montag1[0]);
         LehrerMO1.setText(Montag1[1]);
         RaumMO1.setText(Montag1[2]);
@@ -239,20 +243,57 @@ public class TimeTableFragment extends Fragment {
         RaumDI1.setText(Dienstag1[2]);
 
 
-        String FachMO1Test = FachMO1.getText().toString();
+
+
+
+
+        String FachMO1Test =  FachMO1.getText().toString();
         Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
     }
 
-    public void speicherArray(String a, String b, String c, String d) {
+    public void speicherArray(  String a , String b , String c , String d) {
 
-        Montag1[0] = a;
-        Montag1[1] = b;
-        Montag1[2] = c;
-        Montag1[3] = d;
-        schreibeInTV();
-        String FachMO1Test = FachMO1.getText().toString();
-        Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
+        if (d.contains("MO")) {
+            switch (d) {
+                case "MO1": {
+                    Montag1[0] = a;
+                    Montag1[1] = b;
+                    Montag1[2] = c;
+                    Montag1[3] = d;
+                    schreibeInTV();
+                    String FachMO1Test = FachMO1.getText().toString();
+                    Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
+                    break;
+                }
+
+                case "MO2": {
+                    Montag1[4] = a;
+                    Montag1[5] = b;
+                    Montag1[6] = c;
+                    Montag1[7] = d;
+                    schreibeInTV();
+
+
+                    break;
+                }
+            }
+        } else if (d.contains("DI")) {
+            switch (d) {
+                case "DI1": {
+                    Dienstag1[0] = a;
+                    Dienstag1[1] = b;
+                    Dienstag1[2] = c;
+                    Dienstag1[3] = d;
+                    schreibeInTV();
+
+                    break;
+                }
+            }
+
+
+        }
 
 
     }
 }
+
