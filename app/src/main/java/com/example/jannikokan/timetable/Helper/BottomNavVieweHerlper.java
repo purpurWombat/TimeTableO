@@ -52,9 +52,6 @@ public class BottomNavVieweHerlper  {
                         context.startActivity(intent1);
                         break;
 
-
-
-
                     case R.id.ic_note:
                         Intent intent3 = new Intent(context, NoteActivity.class);
                         context.startActivity(intent3);

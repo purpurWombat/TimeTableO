@@ -23,14 +23,7 @@ public class DialogRaumAnz extends DialogFragment {
     private static final String TAG = "DialogRaumAnz";
 
     DatabaseHelper myDb;
-
     TextView myRaumZu;
-
-
-
-
-
-
 
     @Nullable
     @Override

@@ -302,15 +302,15 @@ public class TimeTableFragment extends Fragment {
     String Montag1[] = {"-", " - ", " -", "-"};
     String Dienstag1[] = {"-", "-", "-", "-"};
     String Mittwoch1[] = {"-", "-", "-", "-"};
-    String Donnerstag1[] =  {"-", "-", "-", "-"};
-    String Freitag1 [] =  {"-", "-", "-", "-"};
+    String Donnerstag1[] = {"-", "-", "-", "-"};
+    String Freitag1[] = {"-", "-", "-", "-"};
 
 
     String montagtest1[] = {"-", "-", "-", "-"};
     String dienstagtest1[] = {"-", "-", "-", "-"};
     String mittwochtest1[] = {"-", "-", "-", "-"};
     String donnerstagtest1[] = {"-", "-", "-", "-"};
-    String freittagtest1 [] =  {"-", "-", "-", "-"};
+    String freittagtest1[] = {"-", "-", "-", "-"};
 
     String montag1 = "Montag1";
     String dienstag1 = "Dienstag1";
@@ -319,21 +319,20 @@ public class TimeTableFragment extends Fragment {
     String freitag1 = "Freitag1";
 
 
-
 // arrays für die zweiten stunden
 
     String Montag2[] = {"-", " - ", " -", "-"};
     String Dienstag2[] = {"-", "-", "-", "-"};
     String Mittwoch2[] = {"-", "-", "-", "-"};
-    String Donnerstag2[] =  {"-", "-", "-", "-"};
-    String Freitag2 [] =  {"-", "-", "-", "-"};
+    String Donnerstag2[] = {"-", "-", "-", "-"};
+    String Freitag2[] = {"-", "-", "-", "-"};
 
 
     String montagtest2[] = {"-", "-", "-", "-"};
     String dienstagtest2[] = {"-", "-", "-", "-"};
     String mittwochtest2[] = {"-", "-", "-", "-"};
     String donnerstagtest2[] = {"-", "-", "-", "-"};
-    String freittagtest2 [] =  {"-", "-", "-", "-"};
+    String freittagtest2[] = {"-", "-", "-", "-"};
 
 
     String montag2 = "Montag2";
@@ -347,15 +346,15 @@ public class TimeTableFragment extends Fragment {
     String Montag3[] = {"-", " - ", " -", "-"};
     String Dienstag3[] = {"-", "-", "-", "-"};
     String Mittwoch3[] = {"-", "-", "-", "-"};
-    String Donnerstag3[] =  {"-", "-", "-", "-"};
-    String Freitag3 [] =  {"-", "-", "-", "-"};
+    String Donnerstag3[] = {"-", "-", "-", "-"};
+    String Freitag3[] = {"-", "-", "-", "-"};
 
 
     String montagtest3[] = {"-", "-", "-", "-"};
     String dienstagtest3[] = {"-", "-", "-", "-"};
     String mittwochtest3[] = {"-", "-", "-", "-"};
     String donnerstagtest3[] = {"-", "-", "-", "-"};
-    String freittagtest3 [] =  {"-", "-", "-", "-"};
+    String freittagtest3[] = {"-", "-", "-", "-"};
 
 
     String montag3 = "Montag3";
@@ -369,15 +368,15 @@ public class TimeTableFragment extends Fragment {
     String Montag4[] = {"-", " - ", " -", "-"};
     String Dienstag4[] = {"-", "-", "-", "-"};
     String Mittwoch4[] = {"-", "-", "-", "-"};
-    String Donnerstag4[] =  {"-", "-", "-", "-"};
-    String Freitag4 [] =  {"-", "-", "-", "-"};
+    String Donnerstag4[] = {"-", "-", "-", "-"};
+    String Freitag4[] = {"-", "-", "-", "-"};
 
 
     String montagtest4[] = {"-", "-", "-", "-"};
     String dienstagtest4[] = {"-", "-", "-", "-"};
     String mittwochtest4[] = {"-", "-", "-", "-"};
     String donnerstagtest4[] = {"-", "-", "-", "-"};
-    String freittagtest4 [] =  {"-", "-", "-", "-"};
+    String freittagtest4[] = {"-", "-", "-", "-"};
 
 
     String montag4 = "Montag4";
@@ -391,15 +390,15 @@ public class TimeTableFragment extends Fragment {
     String Montag5[] = {"-", " - ", " -", "-"};
     String Dienstag5[] = {"-", "-", "-", "-"};
     String Mittwoch5[] = {"-", "-", "-", "-"};
-    String Donnerstag5[] =  {"-", "-", "-", "-"};
-    String Freitag5 [] =  {"-", "-", "-", "-"};
+    String Donnerstag5[] = {"-", "-", "-", "-"};
+    String Freitag5[] = {"-", "-", "-", "-"};
 
 
     String montagtest5[] = {"-", "-", "-", "-"};
     String dienstagtest5[] = {"-", "-", "-", "-"};
     String mittwochtest5[] = {"-", "-", "-", "-"};
     String donnerstagtest5[] = {"-", "-", "-", "-"};
-    String freittagtest5 [] =  {"-", "-", "-", "-"};
+    String freittagtest5[] = {"-", "-", "-", "-"};
 
 
     String montag5 = "Montag5";
@@ -414,15 +413,15 @@ public class TimeTableFragment extends Fragment {
     String Montag6[] = {"-", " - ", " -", "-"};
     String Dienstag6[] = {"-", "-", "-", "-"};
     String Mittwoch6[] = {"-", "-", "-", "-"};
-    String Donnerstag6[] =  {"-", "-", "-", "-"};
-    String Freitag6 [] =  {"-", "-", "-", "-"};
+    String Donnerstag6[] = {"-", "-", "-", "-"};
+    String Freitag6[] = {"-", "-", "-", "-"};
 
 
     String montagtest6[] = {"-", "-", "-", "-"};
     String dienstagtest6[] = {"-", "-", "-", "-"};
     String mittwochtest6[] = {"-", "-", "-", "-"};
     String donnerstagtest6[] = {"-", "-", "-", "-"};
-    String freittagtest6 [] =  {"-", "-", "-", "-"};
+    String freittagtest6[] = {"-", "-", "-", "-"};
 
 
     String montag6 = "Montag6";
@@ -436,15 +435,15 @@ public class TimeTableFragment extends Fragment {
     String Montag7[] = {"-", " - ", " -", "-"};
     String Dienstag7[] = {"-", "-", "-", "-"};
     String Mittwoch7[] = {"-", "-", "-", "-"};
-    String Donnerstag7[] =  {"-", "-", "-", "-"};
-    String Freitag7 [] =  {"-", "-", "-", "-"};
+    String Donnerstag7[] = {"-", "-", "-", "-"};
+    String Freitag7[] = {"-", "-", "-", "-"};
 
 
     String montagtest7[] = {"-", "-", "-", "-"};
     String dienstagtest7[] = {"-", "-", "-", "-"};
     String mittwochtest7[] = {"-", "-", "-", "-"};
     String donnerstagtest7[] = {"-", "-", "-", "-"};
-    String freittagtest7 [] =  {"-", "-", "-", "-"};
+    String freittagtest7[] = {"-", "-", "-", "-"};
 
 
     String montag7 = "Montag7";
@@ -458,15 +457,15 @@ public class TimeTableFragment extends Fragment {
     String Montag8[] = {"-", " - ", " -", "-"};
     String Dienstag8[] = {"-", "-", "-", "-"};
     String Mittwoch8[] = {"-", "-", "-", "-"};
-    String Donnerstag8[] =  {"-", "-", "-", "-"};
-    String Freitag8 [] =  {"-", "-", "-", "-"};
+    String Donnerstag8[] = {"-", "-", "-", "-"};
+    String Freitag8[] = {"-", "-", "-", "-"};
 
 
     String montagtest8[] = {"-", "-", "-", "-"};
     String dienstagtest8[] = {"-", "-", "-", "-"};
     String mittwochtest8[] = {"-", "-", "-", "-"};
     String donnerstagtest8[] = {"-", "-", "-", "-"};
-    String freittagtest8 [] =  {"-", "-", "-", "-"};
+    String freittagtest8[] = {"-", "-", "-", "-"};
 
 
     String montag8 = "Montag8";
@@ -481,15 +480,15 @@ public class TimeTableFragment extends Fragment {
     String Montag9[] = {"-", " - ", " -", "-"};
     String Dienstag9[] = {"-", "-", "-", "-"};
     String Mittwoch9[] = {"-", "-", "-", "-"};
-    String Donnerstag9[] =  {"-", "-", "-", "-"};
-    String Freitag9 [] =  {"-", "-", "-", "-"};
+    String Donnerstag9[] = {"-", "-", "-", "-"};
+    String Freitag9[] = {"-", "-", "-", "-"};
 
 
     String montagtest9[] = {"-", "-", "-", "-"};
     String dienstagtest9[] = {"-", "-", "-", "-"};
     String mittwochtest9[] = {"-", "-", "-", "-"};
     String donnerstagtest9[] = {"-", "-", "-", "-"};
-    String freittagtest9 [] =  {"-", "-", "-", "-"};
+    String freittagtest9[] = {"-", "-", "-", "-"};
 
 
     String montag9 = "Montag9";
@@ -503,15 +502,15 @@ public class TimeTableFragment extends Fragment {
     String Montag0[] = {"-", " - ", " -", "-"};
     String Dienstag0[] = {"-", "-", "-", "-"};
     String Mittwoch0[] = {"-", "-", "-", "-"};
-    String Donnerstag0[] =  {"-", "-", "-", "-"};
-    String Freitag0 [] =  {"-", "-", "-", "-"};
+    String Donnerstag0[] = {"-", "-", "-", "-"};
+    String Freitag0[] = {"-", "-", "-", "-"};
 
 
     String montagtest0[] = {"-", "-", "-", "-"};
     String dienstagtest0[] = {"-", "-", "-", "-"};
     String mittwochtest0[] = {"-", "-", "-", "-"};
     String donnerstagtest0[] = {"-", "-", "-", "-"};
-    String freittagtest0 [] =  {"-", "-", "-", "-"};
+    String freittagtest0[] = {"-", "-", "-", "-"};
 
 
     String montag0 = "Montag0";
@@ -519,12 +518,6 @@ public class TimeTableFragment extends Fragment {
     String mittwoch0 = "Mittwoch0";
     String donnerstag0 = "Donnerstag0";
     String freitag0 = "Freitag0";
-
-
-
-
-
-
 
 
     StundeZuweisen stundeZuweisen;
@@ -831,11 +824,6 @@ public class TimeTableFragment extends Fragment {
         RaumFR0 = (TextView) FR0.findViewById(R.id.textViewRaum);
 
 
-
-
-
-
-
         stundeZuweisen = new StundeZuweisen();
 
         schreibeInTV();
@@ -858,7 +846,6 @@ public class TimeTableFragment extends Fragment {
                 return true;
             }
         });
-
 
 
         DI1.setOnLongClickListener(new View.OnLongClickListener() {
@@ -926,9 +913,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
-
-
         // on click listenere für zweite stunde jedes tages
 
 
@@ -947,7 +931,6 @@ public class TimeTableFragment extends Fragment {
                 return true;
             }
         });
-
 
 
         DI2.setOnLongClickListener(new View.OnLongClickListener() {
@@ -1015,7 +998,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
         // on click listenere für dritte stunde jedes tages
 
 
@@ -1034,7 +1016,6 @@ public class TimeTableFragment extends Fragment {
                 return true;
             }
         });
-
 
 
         DI3.setOnLongClickListener(new View.OnLongClickListener() {
@@ -1102,7 +1083,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
         // on click listenere für vierte stunde jedes tages
 
 
@@ -1121,7 +1101,6 @@ public class TimeTableFragment extends Fragment {
                 return true;
             }
         });
-
 
 
         DI4.setOnLongClickListener(new View.OnLongClickListener() {
@@ -1209,7 +1188,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
         DI5.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -1295,7 +1273,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
         DI6.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -1361,7 +1338,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
         // on click listenere für siebte stunde jedes tages
 
 
@@ -1380,7 +1356,6 @@ public class TimeTableFragment extends Fragment {
                 return true;
             }
         });
-
 
 
         DI7.setOnLongClickListener(new View.OnLongClickListener() {
@@ -1467,7 +1442,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
         DI8.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -1533,8 +1507,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
-
         // on click listenere für neunte stunde jedes tages
 
 
@@ -1553,7 +1525,6 @@ public class TimeTableFragment extends Fragment {
                 return true;
             }
         });
-
 
 
         DI9.setOnLongClickListener(new View.OnLongClickListener() {
@@ -1640,7 +1611,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
         DI0.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
@@ -1706,14 +1676,6 @@ public class TimeTableFragment extends Fragment {
         });
 
 
-
-
-
-
-
-
-
-
         return view;
     }
 
@@ -1728,74 +1690,67 @@ public class TimeTableFragment extends Fragment {
     }
 
 
-
-
     public void schreibeInTV() {
         montagtest1 = loadArray(montag1, getActivity());
         dienstagtest1 = loadArray(dienstag1, getActivity());
         mittwochtest1 = loadArray(mittwoch1, getActivity());
-        donnerstagtest1 = loadArray(donnerstag1,getActivity());
-        freittagtest1 = loadArray(freitag1,getActivity());
+        donnerstagtest1 = loadArray(donnerstag1, getActivity());
+        freittagtest1 = loadArray(freitag1, getActivity());
 
         montagtest2 = loadArray(montag2, getActivity());
         dienstagtest2 = loadArray(dienstag2, getActivity());
         mittwochtest2 = loadArray(mittwoch2, getActivity());
-        donnerstagtest2 = loadArray(donnerstag2,getActivity());
-        freittagtest2 = loadArray(freitag2,getActivity());
+        donnerstagtest2 = loadArray(donnerstag2, getActivity());
+        freittagtest2 = loadArray(freitag2, getActivity());
 
 
         montagtest3 = loadArray(montag3, getActivity());
         dienstagtest3 = loadArray(dienstag3, getActivity());
         mittwochtest3 = loadArray(mittwoch3, getActivity());
-        donnerstagtest3 = loadArray(donnerstag3,getActivity());
-        freittagtest3 = loadArray(freitag3,getActivity());
+        donnerstagtest3 = loadArray(donnerstag3, getActivity());
+        freittagtest3 = loadArray(freitag3, getActivity());
 
         montagtest4 = loadArray(montag4, getActivity());
         dienstagtest4 = loadArray(dienstag4, getActivity());
         mittwochtest4 = loadArray(mittwoch4, getActivity());
-        donnerstagtest4 = loadArray(donnerstag4,getActivity());
-        freittagtest4 = loadArray(freitag4,getActivity());
+        donnerstagtest4 = loadArray(donnerstag4, getActivity());
+        freittagtest4 = loadArray(freitag4, getActivity());
 
         montagtest5 = loadArray(montag5, getActivity());
         dienstagtest5 = loadArray(dienstag5, getActivity());
         mittwochtest5 = loadArray(mittwoch5, getActivity());
-        donnerstagtest5 = loadArray(donnerstag5,getActivity());
-        freittagtest5 = loadArray(freitag5,getActivity());
+        donnerstagtest5 = loadArray(donnerstag5, getActivity());
+        freittagtest5 = loadArray(freitag5, getActivity());
 
         montagtest6 = loadArray(montag6, getActivity());
         dienstagtest6 = loadArray(dienstag6, getActivity());
         mittwochtest6 = loadArray(mittwoch6, getActivity());
-        donnerstagtest6 = loadArray(donnerstag6,getActivity());
-        freittagtest6 = loadArray(freitag6,getActivity());
+        donnerstagtest6 = loadArray(donnerstag6, getActivity());
+        freittagtest6 = loadArray(freitag6, getActivity());
 
         montagtest7 = loadArray(montag7, getActivity());
         dienstagtest7 = loadArray(dienstag7, getActivity());
         mittwochtest7 = loadArray(mittwoch7, getActivity());
-        donnerstagtest7 = loadArray(donnerstag7,getActivity());
-        freittagtest7 = loadArray(freitag7,getActivity());
+        donnerstagtest7 = loadArray(donnerstag7, getActivity());
+        freittagtest7 = loadArray(freitag7, getActivity());
 
         montagtest8 = loadArray(montag8, getActivity());
         dienstagtest8 = loadArray(dienstag8, getActivity());
         mittwochtest8 = loadArray(mittwoch8, getActivity());
-        donnerstagtest8 = loadArray(donnerstag8,getActivity());
-        freittagtest8 = loadArray(freitag8,getActivity());
+        donnerstagtest8 = loadArray(donnerstag8, getActivity());
+        freittagtest8 = loadArray(freitag8, getActivity());
 
         montagtest9 = loadArray(montag9, getActivity());
         dienstagtest9 = loadArray(dienstag9, getActivity());
         mittwochtest9 = loadArray(mittwoch9, getActivity());
-        donnerstagtest9 = loadArray(donnerstag9,getActivity());
-        freittagtest9 = loadArray(freitag9,getActivity());
+        donnerstagtest9 = loadArray(donnerstag9, getActivity());
+        freittagtest9 = loadArray(freitag9, getActivity());
 
         montagtest0 = loadArray(montag0, getActivity());
         dienstagtest0 = loadArray(dienstag0, getActivity());
         mittwochtest0 = loadArray(mittwoch0, getActivity());
-        donnerstagtest0 = loadArray(donnerstag0,getActivity());
-        freittagtest0 = loadArray(freitag0,getActivity());
-
-
-
-
-
+        donnerstagtest0 = loadArray(donnerstag0, getActivity());
+        freittagtest0 = loadArray(freitag0, getActivity());
 
 
 // abfragen für erste Stunde
@@ -1878,7 +1833,6 @@ public class TimeTableFragment extends Fragment {
         }
 
 
-
         // abfragen für fünfte stunde
 
         if (montagtest5.length > 0) {
@@ -1919,7 +1873,6 @@ public class TimeTableFragment extends Fragment {
         if (freittagtest6.length > 0) {
             Freitag6 = freittagtest6;
         }
-
 
 
         // abfragen für siebte stunde
@@ -2005,13 +1958,6 @@ public class TimeTableFragment extends Fragment {
         }
 
 
-
-
-
-
-
-
-
         //    Montag1 = loadArray(montag, getActivity());
 
         //     Dienstag1 = loadArray(dienstag,getActivity());
@@ -2092,7 +2038,6 @@ public class TimeTableFragment extends Fragment {
         RaumFR3.setText(Freitag3[2]);
 
 
-
         // vierte stunden
 
         FachMO4.setText(Montag4[0]);
@@ -2117,7 +2062,6 @@ public class TimeTableFragment extends Fragment {
         FachFR4.setText(Freitag4[0]);
         LehrerFR4.setText(Freitag4[1]);
         RaumFR4.setText(Freitag4[2]);
-
 
 
         // fünfte stunden
@@ -2170,7 +2114,6 @@ public class TimeTableFragment extends Fragment {
         FachFR6.setText(Freitag6[0]);
         LehrerFR6.setText(Freitag6[1]);
         RaumFR6.setText(Freitag6[2]);
-
 
 
         // siebte stunden
@@ -2275,10 +2218,6 @@ public class TimeTableFragment extends Fragment {
         FachFR0.setText(Freitag0[0]);
         LehrerFR0.setText(Freitag0[1]);
         RaumFR0.setText(Freitag0[2]);
-
-
-
-
 
 
         String FachMO1Test = FachMO1.getText().toString();
@@ -2401,7 +2340,6 @@ public class TimeTableFragment extends Fragment {
                 }
 
 
-
             }
 
 
@@ -2510,9 +2448,6 @@ public class TimeTableFragment extends Fragment {
                 }
 
 
-
-
-
             }
         } else if (d.contains("MI")) {
             switch (d) {
@@ -2619,14 +2554,8 @@ public class TimeTableFragment extends Fragment {
                 }
 
 
-
-
-
-
-
-
             }
-        }else if (d.contains("DO")) {
+        } else if (d.contains("DO")) {
             switch (d) {
                 case "DO1": {
                     Holder[0] = a;
@@ -2731,9 +2660,8 @@ public class TimeTableFragment extends Fragment {
                 }
 
 
-
             }
-        }else if (d.contains("FR")) {
+        } else if (d.contains("FR")) {
             switch (d) {
                 case "FR1": {
                     Holder[0] = a;

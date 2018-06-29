@@ -33,11 +33,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String RAUM_ART = "RAUMART";
 
 
-
     private static final String create_Table2 = "create table " + TABLE_LEHRER + "(" + LEHRERID + " INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME + " TEXT," + LEHRERKUERZEL + " TEXT," + LEHRERMAIL + " TEXT)";
     private static final String create_Table = "create table " + TABLE_NAME + "(" + FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME + " TEXT," + FACH_KUERZEL + " TEXT)";
     private static final String create_TableRaum = "create table " + TABLE_RAUM + "(" + RAUM_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + RAUM_NUMMER + " TEXT," + RAUM_ART + " TEXT)";
-
 
 
     public DatabaseHelper(Context context) {
@@ -91,6 +89,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * Diese Methode überprüft die Gültigkeit der Längen und wenn sie gültig sind, werden die create statements an die CheckeUndErstelleTabelle() Methode weitergegeben.
+     *
      * @param benoetigte_tabellen
      * @param table_create_statements
      */
@@ -123,6 +122,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * Diese Methode "befragt" den sqlite_master, ob die Tabelle existiert. Falls nicht, wird die Tabelle erstellt.
+     *
      * @param table
      * @param create_statement
      */
@@ -157,6 +157,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * speichereFachOkan() speichert Fach anhand von den Übergabeparametern im Fach-Table
+     *
      * @param fachName
      * @param fachKuerzel
      * @return
@@ -176,7 +177,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     /**
-     *speichereRaum() speichert Raum anhand von den Übergabeparametern im Raum-Table
+     * speichereRaum() speichert Raum anhand von den Übergabeparametern im Raum-Table
+     *
      * @param raumNummer
      * @param raumArt
      * @return
@@ -198,6 +200,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * speicherLehrer() speichert Lehrer anhand von den Übergabeparametern im Lehrer-Table
+     *
      * @param lehrerName
      * @param lehrerKuerzel
      * @param lehrerMail
@@ -220,6 +223,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * zeigeLehrer() übergibt dem Cursor res via einer SQLite-Abfrage alle Einträge des Lehrer-Tables
+     *
      * @return
      */
     public Cursor zeigeLehrer() {
@@ -230,6 +234,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * zeigeFaecher() übergibt dem Cursor res via einer SQLite-Abfrage alle Einträge des Fach-Tables
+     *
      * @return
      */
     public Cursor zeigeFaecher() {
@@ -241,6 +246,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     /**
      * zeigeRaeume() übergibt dem Cursor res via einer SQLite-Abfrage alle Einträge des Raum-Tables
+     *
      * @return
      */
     public Cursor zeigeRaeume() {
@@ -249,11 +255,26 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
-
-
-
+    public int loescheFach(String fach) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, FACH_NAME + "=?", new String[]{fach});
 
     }
 
+    public int loescheFach(long id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, FACH_ID + "=?", new String[]{String.valueOf(id)});
+    }
+
+    public int loescheLehrer(long id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_LEHRER, LEHRERID + "=?", new String[]{String.valueOf(id)});
+    }
+
+    public int loescheRaum(long id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_RAUM, RAUM_ID + "=?", new String[]{String.valueOf(id)});
+    }
 
 
+}

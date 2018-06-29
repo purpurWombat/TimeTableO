@@ -34,19 +34,11 @@ public class FachErstellen extends AppCompatActivity {
     Button buttonFachSpeichern;
     Button buttonFaecherAnzeigen;
 
-
-
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-     //   myDb = new DatabaseHelper(this);
         myDb.fuegeNeueTabellenHinzu();
         editTextFachName = (EditText) findViewById(R.id.editTextFachName);
         editTextFachKuerzel = (EditText) findViewById(R.id.editTextFachKuerzel);
@@ -100,8 +92,6 @@ public class FachErstellen extends AppCompatActivity {
                     buffer.append("Raum: " + res.getString(3)+"\n");
                     buffer.append("Lehrer: " + res.getString(4)+"\n\n");
                 }
-
-
                 zeigeNachricht("Fächer", buffer.toString());
             }
         });

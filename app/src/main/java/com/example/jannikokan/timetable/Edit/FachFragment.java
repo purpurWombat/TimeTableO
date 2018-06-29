@@ -2,6 +2,7 @@ package com.example.jannikokan.timetable.Edit;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -51,34 +52,18 @@ public class FachFragment extends Fragment {
             }else {
                 Toast.makeText((EditActivity) getActivity(), "Keine Facher da", Toast.LENGTH_LONG).show();
             }
-
-
           }
         });
 
-
-
         brFachAnzeigen.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Log.d(TAG, "--> on click");
-
-
-            DialogFachErstellen dialogFachAnz = new DialogFachErstellen();
-            dialogFachAnz.show(getActivity().getFragmentManager(),"O");
-
-
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ZeigeFaecherListe.class);
+                startActivity(intent);
             }
         });
-
-
-
-
         return view;
     }
-
-
-
 }
 
 

@@ -22,6 +22,9 @@
         <activity android:name=".Calender.CalenderActivity" />
         <activity android:name=".Edit.EditActivity"></activity>
         <activity android:name=".Table.StundeZuweisen"></activity>
+        <activity android:name=".Edit.ZeigeFaecherListe"></activity>
+        <activity android:name=".Edit.ZeigeLehrerListe"></activity>
+        <activity android:name=".Edit.ZeigeRaumListe"></activity>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.example.jannikokan.timetable.Edit;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -59,13 +60,11 @@ public class LehrerFragment extends Fragment {
 
         btAnzLeher.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-                DialogLehrerAnzeigen dialogLehrerAnzeigen = new DialogLehrerAnzeigen();
-                dialogLehrerAnzeigen.show(getActivity().getFragmentManager(),"k");
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),ZeigeLehrerListe.class);
+                startActivity(intent);
             }
         });
-
 
         return view;
 

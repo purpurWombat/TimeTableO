@@ -3,6 +3,7 @@ package com.example.jannikokan.timetable.Edit;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
@@ -56,14 +57,9 @@ public class RaumFragment extends Fragment {
 
         btRaumAnzeigen.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Log.d(TAG, "--> on click");
-
-
-                DialogRaumAnz dialogRaumAnz = new DialogRaumAnz();
-                dialogRaumAnz.show(getActivity().getFragmentManager(),"Y");
-
-
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ZeigeRaumListe.class);
+                startActivity(intent);
             }
         });
 
