@@ -124,6 +124,9 @@ public class TimeTableFragment extends Fragment {
     String Holder[]= {"-", "-", "-","-"};
     String HolderD[]= {"-", "-", "-","-"};
 
+    String montagtest[]= {"-", "-", "-","-"};
+    String dienstagtest[]= {"-", "-", "-","-"};
+
     String a;
     String b;
     String c;
@@ -234,9 +237,22 @@ public class TimeTableFragment extends Fragment {
     }
 
     public void schreibeInTV() {
-        Montag1 = loadArray(montag, getActivity());
+        montagtest = loadArray(montag,getActivity());
+        dienstagtest = loadArray(dienstag,getActivity());
 
-         Dienstag1 = loadArray(dienstag,getActivity());
+
+        if ( montagtest.length > 0){
+            Montag1 = montagtest;
+
+        }
+
+        if (dienstagtest.length > 0) {
+            Dienstag1 = dienstagtest;
+        }
+
+    //    Montag1 = loadArray(montag, getActivity());
+
+    //     Dienstag1 = loadArray(dienstag,getActivity());
 
 
 
@@ -257,6 +273,9 @@ public class TimeTableFragment extends Fragment {
         String FachMO1Test =  FachMO1.getText().toString();
         Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
     }
+
+
+
 
     public void speicherArray(  String a , String b , String c , String d) {
 
