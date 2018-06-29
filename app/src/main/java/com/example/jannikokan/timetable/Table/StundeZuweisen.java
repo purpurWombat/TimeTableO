@@ -77,6 +77,8 @@ public class StundeZuweisen extends AppCompatActivity {
 
         timeTableFragment = new TimeTableFragment();
 
+        Intent intent = getIntent();
+        final String ViewID = intent.getExtras().getString("ViewID");
 
         zeigeSpinnerFaecher();
         zeigeSpinnerLehrer();
@@ -134,7 +136,7 @@ public class StundeZuweisen extends AppCompatActivity {
                 //timeTableFragment.schreibeInArray(ViewID, FKZ,LKZ,RKZ);
 
                 Intent returnIntent = new Intent();
-                returnIntent.putExtra("result", (new String[]{FKZ, LKZ, RKZ}));
+                returnIntent.putExtra("result", (new String[]{FKZ, LKZ, RKZ, ViewID}));
 
                 setResult(Activity.RESULT_OK, returnIntent);
                 finish();
