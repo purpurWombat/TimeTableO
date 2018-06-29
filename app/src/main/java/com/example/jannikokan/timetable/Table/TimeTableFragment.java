@@ -453,7 +453,72 @@ public class TimeTableFragment extends Fragment {
     String donnerstag7 = "Donnerstag7";
     String freitag7 = "Freitag7";
 
+    // arrays für die achte stunden
 
+    String Montag8[] = {"-", " - ", " -", "-"};
+    String Dienstag8[] = {"-", "-", "-", "-"};
+    String Mittwoch8[] = {"-", "-", "-", "-"};
+    String Donnerstag8[] =  {"-", "-", "-", "-"};
+    String Freitag8 [] =  {"-", "-", "-", "-"};
+
+
+    String montagtest8[] = {"-", "-", "-", "-"};
+    String dienstagtest8[] = {"-", "-", "-", "-"};
+    String mittwochtest8[] = {"-", "-", "-", "-"};
+    String donnerstagtest8[] = {"-", "-", "-", "-"};
+    String freittagtest8 [] =  {"-", "-", "-", "-"};
+
+
+    String montag8 = "Montag8";
+    String dienstag8 = "Dienstag8";
+    String mittwoch8 = "Mittwoch8";
+    String donnerstag8 = "Donnerstag8";
+    String freitag8 = "Freitag8";
+
+
+    // arrays für die neunte stunden
+
+    String Montag9[] = {"-", " - ", " -", "-"};
+    String Dienstag9[] = {"-", "-", "-", "-"};
+    String Mittwoch9[] = {"-", "-", "-", "-"};
+    String Donnerstag9[] =  {"-", "-", "-", "-"};
+    String Freitag9 [] =  {"-", "-", "-", "-"};
+
+
+    String montagtest9[] = {"-", "-", "-", "-"};
+    String dienstagtest9[] = {"-", "-", "-", "-"};
+    String mittwochtest9[] = {"-", "-", "-", "-"};
+    String donnerstagtest9[] = {"-", "-", "-", "-"};
+    String freittagtest9 [] =  {"-", "-", "-", "-"};
+
+
+    String montag9 = "Montag9";
+    String dienstag9 = "Dienstag9";
+    String mittwoch9 = "Mittwoch9";
+    String donnerstag9 = "Donnerstag9";
+    String freitag9 = "Freitag9";
+
+    // arrays für die zehnte stunden
+
+    String Montag0[] = {"-", " - ", " -", "-"};
+    String Dienstag0[] = {"-", "-", "-", "-"};
+    String Mittwoch0[] = {"-", "-", "-", "-"};
+    String Donnerstag0[] =  {"-", "-", "-", "-"};
+    String Freitag0 [] =  {"-", "-", "-", "-"};
+
+
+    String montagtest0[] = {"-", "-", "-", "-"};
+    String dienstagtest0[] = {"-", "-", "-", "-"};
+    String mittwochtest0[] = {"-", "-", "-", "-"};
+    String donnerstagtest0[] = {"-", "-", "-", "-"};
+    String freittagtest0 [] =  {"-", "-", "-", "-"};
+
+
+    String montag0 = "Montag0";
+    String dienstag0 = "Dienstag0";
+    String mittwoch0 = "Mittwoch0";
+    String donnerstag0 = "Donnerstag0";
+    String freitag0 = "Freitag0";
 
 
 
@@ -566,6 +631,205 @@ public class TimeTableFragment extends Fragment {
         FachFR3 = (TextView) FR3.findViewById(R.id.textViewFach);
         LehrerFR3 = (TextView) FR3.findViewById(R.id.textViewLehrer);
         RaumFR3 = (TextView) FR3.findViewById(R.id.textViewRaum);
+
+        // vierte Stunden
+
+        MO4 = view.findViewById(R.id.MO4);
+        DI4 = view.findViewById(R.id.DI4);
+        MI4 = view.findViewById(R.id.MI4);
+        DO4 = view.findViewById(R.id.DO4);
+        FR4 = view.findViewById(R.id.FR4);
+
+        FachMO4 = (TextView) MO4.findViewById(R.id.textViewFach);
+        LehrerMO4 = (TextView) MO4.findViewById(R.id.textViewLehrer);
+        RaumMO4 = (TextView) MO4.findViewById(R.id.textViewRaum);
+
+        FachDI4 = (TextView) DI4.findViewById(R.id.textViewFach);
+        LehrerDI4 = (TextView) DI4.findViewById(R.id.textViewLehrer);
+        RaumDI4 = (TextView) DI4.findViewById(R.id.textViewRaum);
+
+        FachMI4 = (TextView) MI4.findViewById(R.id.textViewFach);
+        LehrerMI4 = (TextView) MI4.findViewById(R.id.textViewLehrer);
+        RaumMI4 = (TextView) MI4.findViewById(R.id.textViewRaum);
+
+        FachDO4 = (TextView) DO4.findViewById(R.id.textViewFach);
+        LehrerDO4 = (TextView) DO4.findViewById(R.id.textViewLehrer);
+        RaumDO4 = (TextView) DO4.findViewById(R.id.textViewRaum);
+
+        FachFR4 = (TextView) FR4.findViewById(R.id.textViewFach);
+        LehrerFR4 = (TextView) FR4.findViewById(R.id.textViewLehrer);
+        RaumFR4 = (TextView) FR4.findViewById(R.id.textViewRaum);
+
+
+        // fünfte Stunden
+
+        MO5 = view.findViewById(R.id.MO5);
+        DI5 = view.findViewById(R.id.DI5);
+        MI5 = view.findViewById(R.id.MI5);
+        DO5 = view.findViewById(R.id.DO5);
+        FR5 = view.findViewById(R.id.FR5);
+
+        FachMO5 = (TextView) MO5.findViewById(R.id.textViewFach);
+        LehrerMO5 = (TextView) MO5.findViewById(R.id.textViewLehrer);
+        RaumMO5 = (TextView) MO5.findViewById(R.id.textViewRaum);
+
+        FachDI5 = (TextView) DI5.findViewById(R.id.textViewFach);
+        LehrerDI5 = (TextView) DI5.findViewById(R.id.textViewLehrer);
+        RaumDI5 = (TextView) DI5.findViewById(R.id.textViewRaum);
+
+        FachMI5 = (TextView) MI5.findViewById(R.id.textViewFach);
+        LehrerMI5 = (TextView) MI5.findViewById(R.id.textViewLehrer);
+        RaumMI5 = (TextView) MI5.findViewById(R.id.textViewRaum);
+
+        FachDO5 = (TextView) DO5.findViewById(R.id.textViewFach);
+        LehrerDO5 = (TextView) DO5.findViewById(R.id.textViewLehrer);
+        RaumDO5 = (TextView) DO5.findViewById(R.id.textViewRaum);
+
+        FachFR5 = (TextView) FR5.findViewById(R.id.textViewFach);
+        LehrerFR5 = (TextView) FR5.findViewById(R.id.textViewLehrer);
+        RaumFR5 = (TextView) FR5.findViewById(R.id.textViewRaum);
+
+        // sechste Stunden
+
+        MO6 = view.findViewById(R.id.MO6);
+        DI6 = view.findViewById(R.id.DI6);
+        MI6 = view.findViewById(R.id.MI6);
+        DO6 = view.findViewById(R.id.DO6);
+        FR6 = view.findViewById(R.id.FR6);
+
+        FachMO6 = (TextView) MO6.findViewById(R.id.textViewFach);
+        LehrerMO6 = (TextView) MO6.findViewById(R.id.textViewLehrer);
+        RaumMO6 = (TextView) MO6.findViewById(R.id.textViewRaum);
+
+        FachDI6 = (TextView) DI6.findViewById(R.id.textViewFach);
+        LehrerDI6 = (TextView) DI6.findViewById(R.id.textViewLehrer);
+        RaumDI6 = (TextView) DI6.findViewById(R.id.textViewRaum);
+
+        FachMI6 = (TextView) MI6.findViewById(R.id.textViewFach);
+        LehrerMI6 = (TextView) MI6.findViewById(R.id.textViewLehrer);
+        RaumMI6 = (TextView) MI6.findViewById(R.id.textViewRaum);
+
+        FachDO6 = (TextView) DO6.findViewById(R.id.textViewFach);
+        LehrerDO6 = (TextView) DO6.findViewById(R.id.textViewLehrer);
+        RaumDO6 = (TextView) DO6.findViewById(R.id.textViewRaum);
+
+        FachFR6 = (TextView) FR6.findViewById(R.id.textViewFach);
+        LehrerFR6 = (TextView) FR6.findViewById(R.id.textViewLehrer);
+        RaumFR6 = (TextView) FR6.findViewById(R.id.textViewRaum);
+
+        // siebte Stunden
+
+        MO7 = view.findViewById(R.id.MO7);
+        DI7 = view.findViewById(R.id.DI7);
+        MI7 = view.findViewById(R.id.MI7);
+        DO7 = view.findViewById(R.id.DO7);
+        FR7 = view.findViewById(R.id.FR7);
+
+        FachMO7 = (TextView) MO7.findViewById(R.id.textViewFach);
+        LehrerMO7 = (TextView) MO7.findViewById(R.id.textViewLehrer);
+        RaumMO7 = (TextView) MO7.findViewById(R.id.textViewRaum);
+
+        FachDI7 = (TextView) DI7.findViewById(R.id.textViewFach);
+        LehrerDI7 = (TextView) DI7.findViewById(R.id.textViewLehrer);
+        RaumDI7 = (TextView) DI7.findViewById(R.id.textViewRaum);
+
+        FachMI7 = (TextView) MI7.findViewById(R.id.textViewFach);
+        LehrerMI7 = (TextView) MI7.findViewById(R.id.textViewLehrer);
+        RaumMI7 = (TextView) MI7.findViewById(R.id.textViewRaum);
+
+        FachDO7 = (TextView) DO7.findViewById(R.id.textViewFach);
+        LehrerDO7 = (TextView) DO7.findViewById(R.id.textViewLehrer);
+        RaumDO7 = (TextView) DO7.findViewById(R.id.textViewRaum);
+
+        FachFR7 = (TextView) FR7.findViewById(R.id.textViewFach);
+        LehrerFR7 = (TextView) FR7.findViewById(R.id.textViewLehrer);
+        RaumFR7 = (TextView) FR7.findViewById(R.id.textViewRaum);
+
+
+        // achte Stunden
+
+        MO8 = view.findViewById(R.id.MO8);
+        DI8 = view.findViewById(R.id.DI8);
+        MI8 = view.findViewById(R.id.MI8);
+        DO8 = view.findViewById(R.id.DO8);
+        FR8 = view.findViewById(R.id.FR8);
+
+        FachMO8 = (TextView) MO8.findViewById(R.id.textViewFach);
+        LehrerMO8 = (TextView) MO8.findViewById(R.id.textViewLehrer);
+        RaumMO8 = (TextView) MO8.findViewById(R.id.textViewRaum);
+
+        FachDI8 = (TextView) DI8.findViewById(R.id.textViewFach);
+        LehrerDI8 = (TextView) DI8.findViewById(R.id.textViewLehrer);
+        RaumDI8 = (TextView) DI8.findViewById(R.id.textViewRaum);
+
+        FachMI8 = (TextView) MI8.findViewById(R.id.textViewFach);
+        LehrerMI8 = (TextView) MI8.findViewById(R.id.textViewLehrer);
+        RaumMI8 = (TextView) MI8.findViewById(R.id.textViewRaum);
+
+        FachDO8 = (TextView) DO8.findViewById(R.id.textViewFach);
+        LehrerDO8 = (TextView) DO8.findViewById(R.id.textViewLehrer);
+        RaumDO8 = (TextView) DO8.findViewById(R.id.textViewRaum);
+
+        FachFR8 = (TextView) FR8.findViewById(R.id.textViewFach);
+        LehrerFR8 = (TextView) FR8.findViewById(R.id.textViewLehrer);
+        RaumFR8 = (TextView) FR8.findViewById(R.id.textViewRaum);
+
+        // neunte Stunden
+
+        MO9 = view.findViewById(R.id.MO9);
+        DI9 = view.findViewById(R.id.DI9);
+        MI9 = view.findViewById(R.id.MI9);
+        DO9 = view.findViewById(R.id.DO9);
+        FR9 = view.findViewById(R.id.FR9);
+
+        FachMO9 = (TextView) MO9.findViewById(R.id.textViewFach);
+        LehrerMO9 = (TextView) MO9.findViewById(R.id.textViewLehrer);
+        RaumMO9 = (TextView) MO9.findViewById(R.id.textViewRaum);
+
+        FachDI9 = (TextView) DI9.findViewById(R.id.textViewFach);
+        LehrerDI9 = (TextView) DI9.findViewById(R.id.textViewLehrer);
+        RaumDI9 = (TextView) DI9.findViewById(R.id.textViewRaum);
+
+        FachMI9 = (TextView) MI9.findViewById(R.id.textViewFach);
+        LehrerMI9 = (TextView) MI9.findViewById(R.id.textViewLehrer);
+        RaumMI9 = (TextView) MI9.findViewById(R.id.textViewRaum);
+
+        FachDO9 = (TextView) DO9.findViewById(R.id.textViewFach);
+        LehrerDO9 = (TextView) DO9.findViewById(R.id.textViewLehrer);
+        RaumDO9 = (TextView) DO9.findViewById(R.id.textViewRaum);
+
+        FachFR9 = (TextView) FR9.findViewById(R.id.textViewFach);
+        LehrerFR9 = (TextView) FR9.findViewById(R.id.textViewLehrer);
+        RaumFR9 = (TextView) FR9.findViewById(R.id.textViewRaum);
+
+        // zehnte Stunden
+
+        MO0 = view.findViewById(R.id.MO0);
+        DI0 = view.findViewById(R.id.DI0);
+        MI0 = view.findViewById(R.id.MI0);
+        DO0 = view.findViewById(R.id.DO0);
+        FR0 = view.findViewById(R.id.FR0);
+
+        FachMO0 = (TextView) MO0.findViewById(R.id.textViewFach);
+        LehrerMO0 = (TextView) MO0.findViewById(R.id.textViewLehrer);
+        RaumMO0 = (TextView) MO0.findViewById(R.id.textViewRaum);
+
+        FachDI0 = (TextView) DI0.findViewById(R.id.textViewFach);
+        LehrerDI0 = (TextView) DI0.findViewById(R.id.textViewLehrer);
+        RaumDI0 = (TextView) DI0.findViewById(R.id.textViewRaum);
+
+        FachMI0 = (TextView) MI0.findViewById(R.id.textViewFach);
+        LehrerMI0 = (TextView) MI0.findViewById(R.id.textViewLehrer);
+        RaumMI0 = (TextView) MI0.findViewById(R.id.textViewRaum);
+
+        FachDO0 = (TextView) DO0.findViewById(R.id.textViewFach);
+        LehrerDO0 = (TextView) DO0.findViewById(R.id.textViewLehrer);
+        RaumDO0 = (TextView) DO0.findViewById(R.id.textViewRaum);
+
+        FachFR0 = (TextView) FR0.findViewById(R.id.textViewFach);
+        LehrerFR0 = (TextView) FR0.findViewById(R.id.textViewLehrer);
+        RaumFR0 = (TextView) FR0.findViewById(R.id.textViewRaum);
+
 
 
 
@@ -839,6 +1103,614 @@ public class TimeTableFragment extends Fragment {
 
 
 
+        // on click listenere für vierte stunde jedes tages
+
+
+        MO4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+        DI4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        MI4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        DO4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        FR4.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+        // on click listenere für fünfte stunde jedes tages
+
+
+        MO5.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+        DI5.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        MI5.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        DO5.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        FR5.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+        // on click listenere für sechste stunde jedes tages
+
+
+        MO6.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+        DI6.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        MI6.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        DO6.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        FR6.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+        // on click listenere für siebte stunde jedes tages
+
+
+        MO7.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+        DI7.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        MI7.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        DO7.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        FR7.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        // on click listenere für achte stunde jedes tages
+
+
+        MO8.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+        DI8.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        MI8.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        DO8.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        FR8.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+
+        // on click listenere für neunte stunde jedes tages
+
+
+        MO9.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+        DI9.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        MI9.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        DO9.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        FR9.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        // on click listenere für zehnte stunde jedes tages
+
+
+        MO0.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+        DI0.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        MI0.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        DO0.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        FR0.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+
+
+
+
+
+
 
 
 
@@ -877,6 +1749,53 @@ public class TimeTableFragment extends Fragment {
         mittwochtest3 = loadArray(mittwoch3, getActivity());
         donnerstagtest3 = loadArray(donnerstag3,getActivity());
         freittagtest3 = loadArray(freitag3,getActivity());
+
+        montagtest4 = loadArray(montag4, getActivity());
+        dienstagtest4 = loadArray(dienstag4, getActivity());
+        mittwochtest4 = loadArray(mittwoch4, getActivity());
+        donnerstagtest4 = loadArray(donnerstag4,getActivity());
+        freittagtest4 = loadArray(freitag4,getActivity());
+
+        montagtest5 = loadArray(montag5, getActivity());
+        dienstagtest5 = loadArray(dienstag5, getActivity());
+        mittwochtest5 = loadArray(mittwoch5, getActivity());
+        donnerstagtest5 = loadArray(donnerstag5,getActivity());
+        freittagtest5 = loadArray(freitag5,getActivity());
+
+        montagtest6 = loadArray(montag6, getActivity());
+        dienstagtest6 = loadArray(dienstag6, getActivity());
+        mittwochtest6 = loadArray(mittwoch6, getActivity());
+        donnerstagtest6 = loadArray(donnerstag6,getActivity());
+        freittagtest6 = loadArray(freitag6,getActivity());
+
+        montagtest7 = loadArray(montag7, getActivity());
+        dienstagtest7 = loadArray(dienstag7, getActivity());
+        mittwochtest7 = loadArray(mittwoch7, getActivity());
+        donnerstagtest7 = loadArray(donnerstag7,getActivity());
+        freittagtest7 = loadArray(freitag7,getActivity());
+
+        montagtest8 = loadArray(montag8, getActivity());
+        dienstagtest8 = loadArray(dienstag8, getActivity());
+        mittwochtest8 = loadArray(mittwoch8, getActivity());
+        donnerstagtest8 = loadArray(donnerstag8,getActivity());
+        freittagtest8 = loadArray(freitag8,getActivity());
+
+        montagtest9 = loadArray(montag9, getActivity());
+        dienstagtest9 = loadArray(dienstag9, getActivity());
+        mittwochtest9 = loadArray(mittwoch9, getActivity());
+        donnerstagtest9 = loadArray(donnerstag9,getActivity());
+        freittagtest9 = loadArray(freitag9,getActivity());
+
+        montagtest0 = loadArray(montag0, getActivity());
+        dienstagtest0 = loadArray(dienstag0, getActivity());
+        mittwochtest0 = loadArray(mittwoch0, getActivity());
+        donnerstagtest0 = loadArray(donnerstag0,getActivity());
+        freittagtest0 = loadArray(freitag0,getActivity());
+
+
+
+
+
 
 
 // abfragen für erste Stunde
@@ -936,6 +1855,158 @@ public class TimeTableFragment extends Fragment {
         if (freittagtest3.length > 0) {
             Freitag3 = freittagtest3;
         }
+
+
+        // abfragen für vierte stunde
+
+        if (montagtest4.length > 0) {
+            Montag4 = montagtest4;
+        }
+
+        if (dienstagtest4.length > 0) {
+            Dienstag4 = dienstagtest4;
+        }
+        if (mittwochtest4.length > 0) {
+            Mittwoch4 = mittwochtest4;
+        }
+        if (donnerstagtest4.length > 0) {
+            Donnerstag4 = donnerstagtest4;
+        }
+
+        if (freittagtest4.length > 0) {
+            Freitag4 = freittagtest4;
+        }
+
+
+
+        // abfragen für fünfte stunde
+
+        if (montagtest5.length > 0) {
+            Montag5 = montagtest5;
+        }
+
+        if (dienstagtest5.length > 0) {
+            Dienstag5 = dienstagtest5;
+        }
+        if (mittwochtest5.length > 0) {
+            Mittwoch5 = mittwochtest5;
+        }
+        if (donnerstagtest5.length > 0) {
+            Donnerstag5 = donnerstagtest5;
+        }
+
+        if (freittagtest5.length > 0) {
+            Freitag5 = freittagtest5;
+        }
+
+
+        // abfragen für sechste stunde
+
+        if (montagtest6.length > 0) {
+            Montag6 = montagtest6;
+        }
+
+        if (dienstagtest6.length > 0) {
+            Dienstag6 = dienstagtest6;
+        }
+        if (mittwochtest6.length > 0) {
+            Mittwoch6 = mittwochtest6;
+        }
+        if (donnerstagtest6.length > 0) {
+            Donnerstag6 = donnerstagtest6;
+        }
+
+        if (freittagtest6.length > 0) {
+            Freitag6 = freittagtest6;
+        }
+
+
+
+        // abfragen für siebte stunde
+
+        if (montagtest7.length > 0) {
+            Montag7 = montagtest7;
+        }
+
+        if (dienstagtest7.length > 0) {
+            Dienstag7 = dienstagtest7;
+        }
+        if (mittwochtest7.length > 0) {
+            Mittwoch7 = mittwochtest7;
+        }
+        if (donnerstagtest7.length > 0) {
+            Donnerstag7 = donnerstagtest7;
+        }
+
+        if (freittagtest7.length > 0) {
+            Freitag7 = freittagtest7;
+        }
+
+
+        // abfragen für achte stunde
+
+        if (montagtest8.length > 0) {
+            Montag8 = montagtest8;
+        }
+
+        if (dienstagtest8.length > 0) {
+            Dienstag8 = dienstagtest8;
+        }
+        if (mittwochtest8.length > 0) {
+            Mittwoch8 = mittwochtest8;
+        }
+        if (donnerstagtest8.length > 0) {
+            Donnerstag8 = donnerstagtest8;
+        }
+
+        if (freittagtest8.length > 0) {
+            Freitag8 = freittagtest8;
+        }
+
+
+        // abfragen für neunte stunde
+
+        if (montagtest9.length > 0) {
+            Montag9 = montagtest9;
+        }
+
+        if (dienstagtest9.length > 0) {
+            Dienstag9 = dienstagtest9;
+        }
+        if (mittwochtest9.length > 0) {
+            Mittwoch9 = mittwochtest9;
+        }
+        if (donnerstagtest9.length > 0) {
+            Donnerstag9 = donnerstagtest9;
+        }
+
+        if (freittagtest9.length > 0) {
+            Freitag9 = freittagtest9;
+        }
+
+        // abfragen für zehnte stunde
+
+        if (montagtest0.length > 0) {
+            Montag0 = montagtest0;
+        }
+
+        if (dienstagtest0.length > 0) {
+            Dienstag0 = dienstagtest0;
+        }
+        if (mittwochtest0.length > 0) {
+            Mittwoch0 = mittwochtest0;
+        }
+        if (donnerstagtest0.length > 0) {
+            Donnerstag0 = donnerstagtest0;
+        }
+
+        if (freittagtest0.length > 0) {
+            Freitag0 = freittagtest0;
+        }
+
+
+
+
 
 
 
@@ -1022,6 +2093,115 @@ public class TimeTableFragment extends Fragment {
 
 
 
+        // vierte stunden
+
+        FachMO4.setText(Montag4[0]);
+        LehrerMO4.setText(Montag4[1]);
+        RaumMO4.setText(Montag4[2]);
+
+
+        FachDI4.setText(Dienstag4[0]);
+        LehrerDI4.setText(Dienstag4[1]);
+        RaumDI4.setText(Dienstag4[2]);
+
+        FachMI4.setText(Mittwoch4[0]);
+        LehrerMI4.setText(Mittwoch4[1]);
+        RaumMI4.setText(Mittwoch4[2]);
+
+
+        FachDO4.setText(Donnerstag4[0]);
+        LehrerDO4.setText(Donnerstag4[1]);
+        RaumDO4.setText(Donnerstag4[2]);
+
+
+        FachFR4.setText(Freitag4[0]);
+        LehrerFR4.setText(Freitag4[1]);
+        RaumFR4.setText(Freitag4[2]);
+
+
+
+        // fünfte stunden
+
+        FachMO5.setText(Montag5[0]);
+        LehrerMO5.setText(Montag5[1]);
+        RaumMO5.setText(Montag5[2]);
+
+
+        FachDI5.setText(Dienstag5[0]);
+        LehrerDI5.setText(Dienstag5[1]);
+        RaumDI5.setText(Dienstag5[2]);
+
+        FachMI5.setText(Mittwoch5[0]);
+        LehrerMI5.setText(Mittwoch5[1]);
+        RaumMI5.setText(Mittwoch5[2]);
+
+
+        FachDO5.setText(Donnerstag5[0]);
+        LehrerDO5.setText(Donnerstag5[1]);
+        RaumDO5.setText(Donnerstag5[2]);
+
+
+        FachFR5.setText(Freitag5[0]);
+        LehrerFR5.setText(Freitag5[1]);
+        RaumFR5.setText(Freitag5[2]);
+
+
+        // sechste stunden
+
+        FachMO6.setText(Montag6[0]);
+        LehrerMO6.setText(Montag6[1]);
+        RaumMO6.setText(Montag6[2]);
+
+
+        FachDI6.setText(Dienstag6[0]);
+        LehrerDI6.setText(Dienstag6[1]);
+        RaumDI6.setText(Dienstag6[2]);
+
+        FachMI6.setText(Mittwoch6[0]);
+        LehrerMI6.setText(Mittwoch6[1]);
+        RaumMI6.setText(Mittwoch6[2]);
+
+
+        FachDO6.setText(Donnerstag6[0]);
+        LehrerDO6.setText(Donnerstag6[1]);
+        RaumDO6.setText(Donnerstag6[2]);
+
+
+        FachFR6.setText(Freitag6[0]);
+        LehrerFR6.setText(Freitag6[1]);
+        RaumFR6.setText(Freitag6[2]);
+
+
+
+        // siebte stunden
+
+        FachMO7.setText(Montag7[0]);
+        LehrerMO7.setText(Montag7[1]);
+        RaumMO7.setText(Montag7[2]);
+
+
+        FachDI7.setText(Dienstag7[0]);
+        LehrerDI7.setText(Dienstag7[1]);
+        RaumDI7.setText(Dienstag7[2]);
+
+        FachMI7.setText(Mittwoch7[0]);
+        LehrerMI7.setText(Mittwoch7[1]);
+        RaumMI7.setText(Mittwoch7[2]);
+
+
+        FachDO7.setText(Donnerstag7[0]);
+        LehrerDO7.setText(Donnerstag7[1]);
+        RaumDO7.setText(Donnerstag7[2]);
+
+
+        FachFR7.setText(Freitag7[0]);
+        LehrerFR7.setText(Freitag7[1]);
+        RaumFR7.setText(Freitag7[2]);
+
+
+
+
+
         String FachMO1Test = FachMO1.getText().toString();
         Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
     }
@@ -1064,6 +2244,30 @@ public class TimeTableFragment extends Fragment {
 
                     break;
                 }
+
+                case "MO4": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, montag4, getActivity());
+
+                    break;
+                }
+
+                case "MO5": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, montag5, getActivity());
+
+                    break;
+                }
+
+
             }
 
 
@@ -1100,6 +2304,27 @@ public class TimeTableFragment extends Fragment {
                     break;
                 }
 
+                case "DI4": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, dienstag4, getActivity());
+                    break;
+                }
+
+                case "DI5": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, dienstag5, getActivity());
+                    break;
+                }
+
+
 
             }
         } else if (d.contains("MI")) {
@@ -1131,6 +2356,31 @@ public class TimeTableFragment extends Fragment {
                     saveArray(Holder, mittwoch3, getActivity());
                     break;
                 }
+
+
+                case "MI4": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, mittwoch4, getActivity());
+                    break;
+                }
+
+                case "MI5": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, mittwoch5, getActivity());
+                    break;
+                }
+
+
+
+
             }
         }else if (d.contains("DO")) {
             switch (d) {
@@ -1163,6 +2413,30 @@ public class TimeTableFragment extends Fragment {
                     saveArray(Holder, donnerstag3, getActivity());
                     break;
                 }
+
+
+                case "DO4": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, donnerstag4, getActivity());
+                    break;
+                }
+
+                case "DO5": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, donnerstag5, getActivity());
+                    break;
+                }
+
+
+
             }
         }else if (d.contains("FR")) {
             switch (d) {
@@ -1195,6 +2469,30 @@ public class TimeTableFragment extends Fragment {
                     saveArray(Holder, freitag3, getActivity());
                     break;
                 }
+
+
+                case "FR4": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, freitag4, getActivity());
+                    break;
+                }
+
+                case "FR5": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(Holder, freitag5, getActivity());
+                    break;
+                }
+
+
+
             }
         }
 
