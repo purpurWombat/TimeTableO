@@ -306,7 +306,7 @@ public class TimeTableFragment extends Fragment {
 
     }
 
-
+//a
 
     public boolean saveArray(String[] array, String arrayName, Context mContext) {
         SharedPreferences prefs = mContext.getSharedPreferences("preferencename", 0);
