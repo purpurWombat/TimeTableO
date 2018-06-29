@@ -53,11 +53,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(create_Table);
         db.execSQL(create_Table2);
         db.execSQL(create_TableRaum);
-
-
-
-        //IDs für einzelne Stunden werden in Tabelle Unterrichtsstunden eingetragen
-
     }
 
 
@@ -74,7 +69,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    //fuegeNeueTabllenHinzu() enthält die Tabellen, die erstellt werden müssen und die entsprechenden Strings zum erstellen der Tabelle.
+    /**
+     * fuegeNeueTabllenHinzu() enthält die Tabellen, die erstellt werden müssen und die entsprechenden Strings zum erstellen der Tabelle.
+     */
     public void fuegeNeueTabellenHinzu() {
         String[] benoetigte_tabellen = new String[]{
                 TABLE_NAME,
@@ -92,14 +89,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         erstelleTabellenDieNichtExistieren(benoetigte_tabellen, table_create_statements);
     }
 
-    //Diese Methode überprüft die Gültigkeit der Längen und wenn sie gültig sind, werden die create statements an die CheckeUndErstelleTabelle() Methode weitergegeben.
+    /**
+     * Diese Methode überprüft die Gültigkeit der Längen und wenn sie gültig sind, werden die create statements an die CheckeUndErstelleTabelle() Methode weitergegeben.
+     * @param benoetigte_tabellen
+     * @param table_create_statements
+     */
     private void erstelleTabellenDieNichtExistieren(String[] benoetigte_tabellen, String[] table_create_statements) {
 
-        // Wenn keine keine Tabellen oder table create statements, dann beende
+        /**
+         * Wenn keine keine Tabellen oder table create statements, dann beende
+         */
         if (benoetigte_tabellen.length < 1 || table_create_statements.length < 1) {
             return;
         }
-        // Elemente in den Arrays müssen gleich sein
+
+        /**
+         * Elemente in den Arrays müssen gleich sein
+         */
         if (benoetigte_tabellen.length != table_create_statements.length) {
             return;
         }
@@ -115,7 +121,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-    //Diese Methode "befragt" den sqlite_master, ob die Tabelle existiert. Falls nicht, wird die Tabelle erstellt.
+    /**
+     * Diese Methode "befragt" den sqlite_master, ob die Tabelle existiert. Falls nicht, wird die Tabelle erstellt.
+     * @param table
+     * @param create_statement
+     */
     private void CheckeUndErstelleTabelle(String table, String create_statement) {
         SQLiteDatabase db = this.getWritableDatabase();
         String whereclause = "name=? AND type=?";
@@ -145,7 +155,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-
+    /**
+     * speichereFachOkan() speichert Fach anhand von den Übergabeparametern im Fach-Table
+     * @param fachName
+     * @param fachKuerzel
+     * @return
+     */
     public boolean speichereFachOKan(String fachName, String fachKuerzel) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -161,7 +176,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     /**
-     *
+     *speichereRaum() speichert Raum anhand von den Übergabeparametern im Raum-Table
      * @param raumNummer
      * @param raumArt
      * @return
@@ -181,7 +196,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
     }
 
-
+    /**
+     * speicherLehrer() speichert Lehrer anhand von den Übergabeparametern im Lehrer-Table
+     * @param lehrerName
+     * @param lehrerKuerzel
+     * @param lehrerMail
+     * @return
+     */
     public boolean speicherLehrer(String lehrerName, String lehrerKuerzel, String lehrerMail) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -194,11 +215,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         } else {
             return true;
         }
-
     }
 
+
     /**
-     *
+     * zeigeLehrer() übergibt dem Cursor res via einer SQLite-Abfrage alle Einträge des Lehrer-Tables
      * @return
      */
     public Cursor zeigeLehrer() {
@@ -207,6 +228,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return res;
     }
 
+    /**
+     * zeigeFaecher() übergibt dem Cursor res via einer SQLite-Abfrage alle Einträge des Fach-Tables
+     * @return
+     */
     public Cursor zeigeFaecher() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_NAME, null);
@@ -214,6 +239,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+    /**
+     * zeigeRaeume() übergibt dem Cursor res via einer SQLite-Abfrage alle Einträge des Raum-Tables
+     * @return
+     */
     public Cursor zeigeRaeume() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_RAUM, null);
@@ -226,9 +255,5 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    /*public String getFachMO1(){
-            SQLiteDatabase db = this.getWritableDatabase();
-            //String query = "SELECT FachNr FROM Unterrichtsstunden_table WHERE UNTERRICHTSSTUNDEID = MO1";
-             return db.execSQL("SELECT FachNr FROM Unterrichtsstunden_table WHERE UNTERRICHTSSTUNDEID = MO1");
-    }*/
+
 

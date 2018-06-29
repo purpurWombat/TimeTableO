@@ -35,9 +35,6 @@ public class HomeActivity extends AppCompatActivity {
     String c;
     TextView Mo1;
 
-//test
-    //okan
-    // okan 23
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

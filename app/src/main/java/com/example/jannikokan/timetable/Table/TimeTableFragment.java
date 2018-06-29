@@ -119,13 +119,15 @@ public class TimeTableFragment extends Fragment {
     ViewGroup FR10;
 
     String IDfinal;
-    String Montag1[] = {"-", " - ", " -","-"};
-    String Dienstag1[] = {"-", "-", "-","-"};
-    String Holder[]= {"-", "-", "-","-"};
-    String HolderD[]= {"-", "-", "-","-"};
+    String Montag1[] = {"-", " - ", " -", "-"};
+    String Dienstag1[] = {"-", "-", "-", "-"};
+    String Mittwoch1[] = {"-", "-", "-", "-"};
+    String Holder[] = {"-", "-", "-", "-"};
+    String HolderD[] = {"-", "-", "-", "-"};
 
-    String montagtest[]= {"-", "-", "-","-"};
-    String dienstagtest[]= {"-", "-", "-","-"};
+    String montagtest[] = {"-", "-", "-", "-"};
+    String dienstagtest[] = {"-", "-", "-", "-"};
+    String mittwochtest[] = {"-", "-", "-", "-"};
 
     String a;
     String b;
@@ -133,16 +135,17 @@ public class TimeTableFragment extends Fragment {
     TextView Lehrer;
 
     TextView Raum;
-    String montag ="a";
-    String dienstag = "d";
+    String montag = "Montag";
+    String dienstag = "Dienstag";
+    String mittwoch = "Mittwoch";
 
     StundeZuweisen stundeZuweisen;
 
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        Log.d(TAG, ""+resultCode + requestCode);
-        if( resultCode == Activity.RESULT_OK && requestCode == 0){
+        Log.d(TAG, "" + resultCode + requestCode);
+        if (resultCode == Activity.RESULT_OK && requestCode == 0) {
             String arr[] = data.getStringArrayExtra("result");
             speicherArray(arr[0], arr[1], arr[2], arr[3]);
         }
@@ -156,6 +159,7 @@ public class TimeTableFragment extends Fragment {
         myTL = view.findViewById(R.id.tableLayoutTage);
         MO1 = view.findViewById(R.id.MO1);
         VGMO1 = view.findViewById(R.id.MO1);
+        MI1 = view.findViewById(R.id.MI1);
         DI1 = view.findViewById(R.id.DI1);
 
 
@@ -167,11 +171,32 @@ public class TimeTableFragment extends Fragment {
         LehrerDI1 = (TextView) DI1.findViewById(R.id.textViewLehrer);
         RaumDI1 = (TextView) DI1.findViewById(R.id.textViewRaum);
 
+        FachMI1 = (TextView) MI1.findViewById(R.id.textViewFach);
+        LehrerMI1 = (TextView) DI1.findViewById(R.id.textViewLehrer);
+        RaumMI1 = (TextView) DI1.findViewById(R.id.textViewRaum);
+
+
         stundeZuweisen = new StundeZuweisen();
 
         schreibeInTV();
 
         DI1.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                String ViewID = getResources().getResourceName(view.getId());
+                IDfinal = cutID(ViewID);
+
+                Log.d(TAG, "" + IDfinal);
+
+                Intent intent = new Intent(getActivity(), StundeZuweisen.class);
+                intent.putExtra("ViewID", IDfinal);
+
+                startActivityForResult(intent, 0);
+                return true;
+            }
+        });
+
+        MI1.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 String ViewID = getResources().getResourceName(view.getId());
@@ -203,19 +228,8 @@ public class TimeTableFragment extends Fragment {
                 return true;
             }
         });
-
-
-
-
-
-        //arrayToString();
-
-
-
         return view;
     }
-
-
 
 
     public String cutID(String longID) {
@@ -237,23 +251,24 @@ public class TimeTableFragment extends Fragment {
     }
 
     public void schreibeInTV() {
-        montagtest = loadArray(montag,getActivity());
-        dienstagtest = loadArray(dienstag,getActivity());
+        montagtest = loadArray(montag, getActivity());
+        dienstagtest = loadArray(dienstag, getActivity());
+        mittwochtest = loadArray(mittwoch, getActivity());
 
-
-        if ( montagtest.length > 0){
+        if (montagtest.length > 0) {
             Montag1 = montagtest;
-
         }
 
         if (dienstagtest.length > 0) {
             Dienstag1 = dienstagtest;
         }
+        if (mittwochtest.length > 0) {
+            Mittwoch1 = mittwochtest;
+        }
 
-    //    Montag1 = loadArray(montag, getActivity());
+        //    Montag1 = loadArray(montag, getActivity());
 
-    //     Dienstag1 = loadArray(dienstag,getActivity());
-
+        //     Dienstag1 = loadArray(dienstag,getActivity());
 
 
         FachMO1.setText(Montag1[0]);
@@ -265,27 +280,24 @@ public class TimeTableFragment extends Fragment {
         LehrerDI1.setText(Dienstag1[1]);
         RaumDI1.setText(Dienstag1[2]);
 
+        FachMI1.setText(Mittwoch1[0]);
+        LehrerMI1.setText(Mittwoch1[1]);
+        RaumMI1.setText(Mittwoch1[2]);
 
-
-//ok
-
-
-        String FachMO1Test =  FachMO1.getText().toString();
+        String FachMO1Test = FachMO1.getText().toString();
         Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
     }
 
 
-
-
-    public void speicherArray(  String a , String b , String c , String d) {
+    public void speicherArray(String a, String b, String c, String d) {
 
         if (d.contains("MO")) {
             switch (d) {
                 case "MO1": {
-                   Holder[0] = a;
+                    Holder[0] = a;
                     Holder[1] = b;
                     Holder[2] = c;
-                  Holder[3] = d;
+                    Holder[3] = d;
                     schreibeInTV();
                     String FachMO1Test = FachMO1.getText().toString();
                     Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
@@ -309,17 +321,27 @@ public class TimeTableFragment extends Fragment {
         } else if (d.contains("DI")) {
             switch (d) {
                 case "DI1": {
-                    HolderD[0] = a;
-                    HolderD[1] = b;
-                    HolderD[2] = c;
-                    HolderD[3] = d;
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
                     schreibeInTV();
                     saveArray(HolderD, dienstag, getActivity());
                     break;
                 }
             }
-
-
+        } else if (d.contains("MI")) {
+            switch (d) {
+                case "MI1": {
+                    Holder[0] = a;
+                    Holder[1] = b;
+                    Holder[2] = c;
+                    Holder[3] = d;
+                    schreibeInTV();
+                    saveArray(HolderD, dienstag, getActivity());
+                    break;
+                }
+            }
         }
 
 
@@ -330,8 +352,8 @@ public class TimeTableFragment extends Fragment {
     public boolean saveArray(String[] array, String arrayName, Context mContext) {
         SharedPreferences prefs = mContext.getSharedPreferences("preferencename", 0);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putInt(arrayName +"_size", array.length);
-        for(int i=0;i<array.length;i++)
+        editor.putInt(arrayName + "_size", array.length);
+        for (int i = 0; i < array.length; i++)
             editor.putString(arrayName + "_" + i, array[i]);
         return editor.commit();
     }
@@ -341,7 +363,7 @@ public class TimeTableFragment extends Fragment {
         SharedPreferences prefs = mContext.getSharedPreferences("preferencename", 0);
         int size = prefs.getInt(arrayName + "_size", 0);
         String array[] = new String[size];
-        for(int i=0;i<size;i++)
+        for (int i = 0; i < size; i++)
             array[i] = prefs.getString(arrayName + "_" + i, null);
         return array;
     }

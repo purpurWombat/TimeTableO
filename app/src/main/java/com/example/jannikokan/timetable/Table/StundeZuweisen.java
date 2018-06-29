@@ -45,17 +45,9 @@ public class StundeZuweisen extends AppCompatActivity {
     String lehrerSpinnerText;
     String raumSpinnerText;
 
-    /*String FKZ;
-    String LKZ;
-    String RKZ;*/
-
     Button buttonStundeZuweisen;
 
     TimeTableFragment timeTableFragment;
-
-
-
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -85,13 +77,11 @@ public class StundeZuweisen extends AppCompatActivity {
         zeigeSpinnerRaum();
         getFachSpinnerText();
 
-
         fachSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 fachSpinnerText = fachSpinner.getSelectedItem().toString();
                 Log.d(TAG, "" + fachSpinnerText);
-
             }
 
             @Override
@@ -126,6 +116,7 @@ public class StundeZuweisen extends AppCompatActivity {
         });
 
 
+
         buttonStundeZuweisen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -133,8 +124,10 @@ public class StundeZuweisen extends AppCompatActivity {
                 String LKZ = lehrerSpinnerText;
                 String RKZ = raumSpinnerText;
                 Log.d(TAG, "" + FKZ + LKZ + RKZ);
-                //timeTableFragment.schreibeInArray(ViewID, FKZ,LKZ,RKZ);
 
+                /**
+                 * startet den Intent returnIntent und übergibt ein String Array mit FKZ,LKZ und RKZ
+                 */
                 Intent returnIntent = new Intent();
                 returnIntent.putExtra("result", (new String[]{FKZ, LKZ, RKZ, ViewID}));
 
@@ -144,20 +137,19 @@ public class StundeZuweisen extends AppCompatActivity {
 
                 Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
 
-            /*boolean istGespeichert =  myDb.speicherStunde(ViewID, FKZ, LKZ , RKZ);
-            if (istGespeichert == true){
-                Toast.makeText(StundeZuweisen.this, "Stunde wurde zugewiesen.", Toast.LENGTH_LONG).show();
-            }*/
             }
         });
     }
 
 
-    public void zeigeSpinnerFaecher(){
+    /**
+     * zeigeSpinnerFaecher() zeigt Fächer im fachSpinner an
+     */
+    public void zeigeSpinnerFaecher() {
 
         res = myDb.zeigeFaecher();
 
-        while(res.moveToNext()){
+        while (res.moveToNext()) {
             faecherListe.add(res.getString(1));
         }
 
@@ -165,27 +157,30 @@ public class StundeZuweisen extends AppCompatActivity {
         faecherAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         fachSpinner.setAdapter(faecherAdapter);
 
-        }
+    }
 
-    public void zeigeSpinnerLehrer(){
+    /**
+     * zeigeSpinnerLehrer zeigt Lehrer im lehrerSpinner an
+     */
+    public void zeigeSpinnerLehrer() {
 
         res = myDb.zeigeLehrer();
 
-        while(res.moveToNext()){
+        while (res.moveToNext()) {
             lehrerListe.add(res.getString(1));
         }
-
-
         lehrerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         lehrerSpinner.setAdapter(lehrerAdapter);
-
     }
 
-    public void zeigeSpinnerRaum(){
+    /**
+     * zeigeSpinnerRaum zeigt Räume im raumSpinner an
+     */
+    public void zeigeSpinnerRaum() {
 
         res = myDb.zeigeRaeume();
 
-        while(res.moveToNext()){
+        while (res.moveToNext()) {
             raumListe.add(res.getString(1));
         }
 
