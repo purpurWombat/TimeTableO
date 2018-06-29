@@ -123,7 +123,7 @@ public class TimeTableFragment extends Fragment {
     String Dienstag1[] = {"-", "-", "-", "-"};
     String Mittwoch1[] = {"-", "-", "-", "-"};
     String Holder[] = {"-", "-", "-", "-"};
-    String HolderD[] = {"-", "-", "-", "-"};
+
 
     String montagtest[] = {"-", "-", "-", "-"};
     String dienstagtest[] = {"-", "-", "-", "-"};
@@ -172,8 +172,8 @@ public class TimeTableFragment extends Fragment {
         RaumDI1 = (TextView) DI1.findViewById(R.id.textViewRaum);
 
         FachMI1 = (TextView) MI1.findViewById(R.id.textViewFach);
-        LehrerMI1 = (TextView) DI1.findViewById(R.id.textViewLehrer);
-        RaumMI1 = (TextView) DI1.findViewById(R.id.textViewRaum);
+        LehrerMI1 = (TextView) MI1.findViewById(R.id.textViewLehrer);
+        RaumMI1 = (TextView) MI1.findViewById(R.id.textViewRaum);
 
 
         stundeZuweisen = new StundeZuweisen();
@@ -242,13 +242,7 @@ public class TimeTableFragment extends Fragment {
     }
 
 
-    public void setzeTextViewFachMO1() {
-        FachMO1.setText(stundeZuweisen.getFachSpinnerText());
-    }
 
-    public void schreibeInArray(String Stunde) {
-        FachMO1.setText(Stunde);
-    }
 
     public void schreibeInTV() {
         montagtest = loadArray(montag, getActivity());
@@ -326,7 +320,7 @@ public class TimeTableFragment extends Fragment {
                     Holder[2] = c;
                     Holder[3] = d;
                     schreibeInTV();
-                    saveArray(HolderD, dienstag, getActivity());
+                    saveArray(Holder, dienstag, getActivity());
                     break;
                 }
             }
@@ -338,7 +332,7 @@ public class TimeTableFragment extends Fragment {
                     Holder[2] = c;
                     Holder[3] = d;
                     schreibeInTV();
-                    saveArray(HolderD, dienstag, getActivity());
+                    saveArray(Holder, mittwoch, getActivity());
                     break;
                 }
             }
