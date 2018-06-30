@@ -27,7 +27,13 @@ public class DialogLehrerAnzeigen extends DialogFragment {
     TextView myLZu;
 
 
-
+    /**
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
 
     @Nullable
     @Override

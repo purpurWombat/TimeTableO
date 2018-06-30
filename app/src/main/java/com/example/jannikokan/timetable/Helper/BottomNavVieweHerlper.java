@@ -31,6 +31,11 @@ public class BottomNavVieweHerlper  {
     * Den Context auf final setzen damit man in der Override damit arbeiten kann
     * */
 
+    /**
+     *
+     * @param context
+     * @param viewEx
+     */
     public static void enableNavigation(final Context context, BottomNavigationViewEx viewEx){
         viewEx.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

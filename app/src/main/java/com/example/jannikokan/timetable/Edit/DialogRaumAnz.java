@@ -25,6 +25,14 @@ public class DialogRaumAnz extends DialogFragment {
     DatabaseHelper myDb;
     TextView myRaumZu;
 
+    /**
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return
+     */
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {

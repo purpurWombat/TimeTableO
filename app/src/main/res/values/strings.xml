@@ -16,4 +16,5 @@
     <string name="title_activity_raum_erstellen">RaumErstellen</string>
     <string name="raumnummer">Raumnummer:</string>
     <string name="raumart">Raumart:</string>
+    <string name="title_activity_notizen_view">NotizenView</string>
 </resources>

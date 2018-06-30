@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.jannikokan.timetable">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,11 +22,11 @@
         <activity android:name=".Helper.DatabaseHelper" />
         <activity android:name=".Note.NoteActivity" />
         <activity android:name=".Calender.CalenderActivity" />
-        <activity android:name=".Edit.EditActivity"></activity>
-        <activity android:name=".Table.StundeZuweisen"></activity>
-        <activity android:name=".Edit.ZeigeFaecherListe"></activity>
-        <activity android:name=".Edit.ZeigeLehrerListe"></activity>
-        <activity android:name=".Edit.ZeigeRaumListe"></activity>
+        <activity android:name=".Edit.EditActivity" />
+        <activity android:name=".Table.StundeZuweisen" />
+        <activity android:name=".Edit.ZeigeFaecherListe" />
+        <activity android:name=".Edit.ZeigeLehrerListe" />
+        <activity android:name=".Edit.ZeigeRaumListe" />
     </application>
 
 </manifest>

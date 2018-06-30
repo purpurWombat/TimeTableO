@@ -261,16 +261,31 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public int loescheFach(long id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_NAME, FACH_ID + "=?", new String[]{String.valueOf(id)});
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public int loescheLehrer(long id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_LEHRER, LEHRERID + "=?", new String[]{String.valueOf(id)});
     }
 
+    /**
+     *
+     * @param id
+     * @return
+     */
     public int loescheRaum(long id) {
         SQLiteDatabase db = this.getWritableDatabase();
         return db.delete(TABLE_RAUM, RAUM_ID + "=?", new String[]{String.valueOf(id)});

@@ -1679,7 +1679,11 @@ public class TimeTableFragment extends Fragment {
         return view;
     }
 
-
+    /**
+     * Schneidet die ID von der ViewGroup aud die Letzen 3 Buchstaben zu
+     * @param longID
+     * @return
+     */
     public String cutID(String longID) {
         if (longID.length() == 3) {
             return longID;
@@ -1689,7 +1693,9 @@ public class TimeTableFragment extends Fragment {
         return longID;
     }
 
-
+    /**
+     * schreibt in die TextView
+     */
     public void schreibeInTV() {
         montagtest1 = loadArray(montag1, getActivity());
         dienstagtest1 = loadArray(dienstag1, getActivity());
@@ -2225,6 +2231,13 @@ public class TimeTableFragment extends Fragment {
     }
 
 
+    /**
+     * speichert die bekommenen Strings und die ID von Stundezuweisen in das Passende Array
+     * @param a
+     * @param b
+     * @param c
+     * @param d
+     */
     public void speicherArray(String a, String b, String c, String d) {
 
         if (d.contains("MO")) {
@@ -2772,8 +2785,14 @@ public class TimeTableFragment extends Fragment {
 
     }
 
-//a
 
+    /**
+     * Speichert die Arrays mit SharedPreferences
+     * @param array
+     * @param arrayName
+     * @param mContext
+     * @return
+     */
     public boolean saveArray(String[] array, String arrayName, Context mContext) {
         SharedPreferences prefs = mContext.getSharedPreferences("preferencename", 0);
         SharedPreferences.Editor editor = prefs.edit();
@@ -2783,7 +2802,12 @@ public class TimeTableFragment extends Fragment {
         return editor.commit();
     }
 
-
+    /**
+     * Lädt das Gespeicherte Array
+     * @param arrayName
+     * @param mContext
+     * @return
+     */
     public String[] loadArray(String arrayName, Context mContext) {
         SharedPreferences prefs = mContext.getSharedPreferences("preferencename", 0);
         int size = prefs.getInt(arrayName + "_size", 0);

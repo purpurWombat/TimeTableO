@@ -34,7 +34,10 @@ public class EditActivity extends AppCompatActivity {
 
     DatabaseHelper myDb;
 
-
+    /**
+     *
+     * @param savedInstanceState
+     */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +96,11 @@ public class EditActivity extends AppCompatActivity {
         menuItem.setChecked(true);
     }
 
-
+    /**
+     *
+     * @param inputF
+     * @param inputKz
+     */
     public void addFach(String inputF, String inputKz){
                 boolean istGespeichert = myDb.speichereFachOKan(inputF,inputKz);
                 if (istGespeichert==true){
@@ -105,7 +112,12 @@ public class EditActivity extends AppCompatActivity {
             }
 
 
-
+    /**
+     *
+     * @param inputL
+     * @param inputLKz
+     * @param inputLMail
+     */
     public void addLehrer(String inputL, String inputLKz , String inputLMail){
         boolean istGespeichert = myDb.speicherLehrer(inputL,inputLKz , inputLMail);
         if (istGespeichert==true){
@@ -115,6 +127,12 @@ public class EditActivity extends AppCompatActivity {
             Toast.makeText(EditActivity.this, "Fach konnte nicht gespeichert werden.", Toast.LENGTH_LONG).show();
         }
     }
+
+    /**
+     *
+     * @param inputR
+     * @param inputRArt
+     */
 
     public void addRaum(String inputR, String inputRArt){
         boolean istGespeichert = myDb.speichereRaum(inputR,inputRArt);

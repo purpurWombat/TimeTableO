@@ -26,11 +26,22 @@ public class SectionsPageAdapter extends FragmentPagerAdapter {
 
 
     /* Ermitteln der Akutellen position in der Titelliste der Fragmenttitel*/
+
+    /**
+     *
+     * @param position
+     * @return
+     */
     @Override
     public CharSequence getPageTitle(int position) {
         return myFragmentTitleList.get(position);
     }
 
+    /**
+     *
+     * @param position
+     * @return
+     */
     /*Ermitteln der Aktuellen position in der Fragmentliste*/
     @Override
     public Fragment getItem(int position) {
@@ -38,6 +49,11 @@ public class SectionsPageAdapter extends FragmentPagerAdapter {
     }
 
     /*Zum ermitteln der Akutellen größe der Frgment liste*/
+
+    /**
+     *
+     * @return
+     */
     @Override
     public int getCount() {
         return myFragmentList.size();
