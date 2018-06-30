@@ -2799,8 +2799,8 @@ public class TimeTableFragment extends Fragment {
             editor.putString(arrayName + "_" + i, array[i]);
         return editor.commit();
     }
-
     /**
+
      * Lädt das gespeicherte Array
      * @param arrayName
      * @param mContext

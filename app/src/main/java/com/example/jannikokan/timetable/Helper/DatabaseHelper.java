@@ -20,7 +20,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String FACH_KUERZEL = "FACHKUERZEL";
     public static final String FACH_RAUM = "FACHRAUM";
     public static final String FACH_LEHRER = "FACHLEHRER";
-    public static final String FACH_FARBE = "FACHFARBE";
     public static final String TABLE_LEHRER = "Lehrer_table";
     public static final String LEHRERID = "ID_L";
     public static final String LEHRERNAME = "LEHRERNAME";
@@ -31,7 +30,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String RAUM_ID = "ID_RAUM";
     public static final String RAUM_NUMMER = "RAUMNUMMER";
     public static final String RAUM_ART = "RAUMART";
-
 
     private static final String create_Table2 = "create table " + TABLE_LEHRER + "(" + LEHRERID + " INTEGER PRIMARY KEY AUTOINCREMENT," + LEHRERNAME + " TEXT," + LEHRERKUERZEL + " TEXT," + LEHRERMAIL + " TEXT)";
     private static final String create_Table = "create table " + TABLE_NAME + "(" + FACH_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," + FACH_NAME + " TEXT," + FACH_KUERZEL + " TEXT)";
