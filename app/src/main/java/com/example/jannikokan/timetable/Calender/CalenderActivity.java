@@ -1,6 +1,7 @@
 package com.example.jannikokan.timetable.Calender;
 
 import android.content.Context;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,15 +16,18 @@ public class CalenderActivity extends AppCompatActivity {
     private Context myContext = CalenderActivity.this;
     private static final String TAG = "CalenderActivity";
    private static final  int ACTIVITY_NUM = 3;
+    ViewPager myViewPager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_calender);
         Log.d(TAG, "onCreate: -->");
         
         setupBottomNavigationView();
+
+
 
     }
 
