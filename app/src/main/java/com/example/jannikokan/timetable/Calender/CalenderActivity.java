@@ -24,6 +24,7 @@ public class CalenderActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: -->");
         
         setupBottomNavigationView();
+
     }
 
 
