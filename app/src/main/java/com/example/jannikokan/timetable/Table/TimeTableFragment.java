@@ -1680,7 +1680,7 @@ public class TimeTableFragment extends Fragment {
     }
 
     /**
-     * Schneidet die ID von der ViewGroup aud die Letzen 3 Buchstaben zu
+     * Schneidet die ID von der ViewGroup auf die letzen 3 Buchstaben zu
      * @param longID
      * @return
      */
@@ -1992,7 +1992,6 @@ public class TimeTableFragment extends Fragment {
         LehrerFR1.setText(Freitag1[1]);
         RaumFR1.setText(Freitag1[2]);
 
-
         // zweite stunden
 
         FachMO2.setText(Montag2[0]);
@@ -2228,11 +2227,10 @@ public class TimeTableFragment extends Fragment {
 
         String FachMO1Test = FachMO1.getText().toString();
         Log.d(TAG, "schreibeInTV: korrekt" + FachMO1Test);
-    }
-
+    };
 
     /**
-     * speichert die bekommenen Strings und die ID von Stundezuweisen in das Passende Array
+     * speichert die bekommenen Strings und die ID von StundeZuweisen in das passende Array
      * @param a
      * @param b
      * @param c
@@ -2803,7 +2801,7 @@ public class TimeTableFragment extends Fragment {
     }
 
     /**
-     * Lädt das Gespeicherte Array
+     * Lädt das gespeicherte Array
      * @param arrayName
      * @param mContext
      * @return
