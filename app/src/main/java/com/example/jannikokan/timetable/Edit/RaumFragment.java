@@ -47,7 +47,7 @@ public class RaumFragment extends Fragment {
                     ((EditActivity)getActivity()).addRaum(inputR,inputRArt);
 
                 }else {
-                    Toast.makeText((EditActivity) getActivity(), "Keine Facher da", Toast.LENGTH_LONG).show();
+                    Toast.makeText((EditActivity) getActivity(), "Keine Räume da", Toast.LENGTH_LONG).show();
                 }
 
 

@@ -50,7 +50,7 @@ public class LehrerFragment extends Fragment {
                     ((EditActivity)getActivity()).addLehrer(inputL,inputLKz,inputLMail);
 
                 }else {
-                    Toast.makeText((EditActivity) getActivity(), "Keine Facher da", Toast.LENGTH_LONG).show();
+                    Toast.makeText((EditActivity) getActivity(), "Keine Lehrer da", Toast.LENGTH_LONG).show();
                 }
 
 
